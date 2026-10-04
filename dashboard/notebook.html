@@ -179,7 +179,26 @@ print(f&quot;Master: {spark.sparkContext.master} | Default Parallelism: {spark.s
             <div class="nb-cell nb-code-cell">
               <div class="nb-input-area">
                 <div class="nb-prompt">In [3]:</div>
-                <div class="nb-code-box"><pre><code class="language-python">from src.data_ingestion import ingest_cicids_to_parquet, benchmark_storage, get_raw_dataset_files
+                <div class="nb-code-box"><pre><code class="language-python">import os
+import sys
+import importlib
+import urllib.request
+
+# Ensure latest code &amp; sample data in Colab
+if &#x27;google.colab&#x27; in sys.modules or os.path.exists(&#x27;/content&#x27;):
+    sample_file = &#x27;data/sample_cicids/cicids2017_sample.csv&#x27;
+    if not os.path.exists(sample_file):
+        os.makedirs(&#x27;data/sample_cicids&#x27;, exist_ok=True)
+        print(&#x27;[COLAB] Downloading portable CICIDS2017 sample dataset...&#x27;)
+        urllib.request.urlretrieve(&#x27;https://raw.githubusercontent.com/raulferns/grIDSentry/main/data/sample_cicids/cicids2017_sample.csv&#x27;, sample_file)
+    # Synchronize latest data_ingestion module and reload cache
+    os.makedirs(&#x27;src&#x27;, exist_ok=True)
+    urllib.request.urlretrieve(&#x27;https://raw.githubusercontent.com/raulferns/grIDSentry/main/src/data_ingestion.py&#x27;, &#x27;src/data_ingestion.py&#x27;)
+    if &#x27;src.data_ingestion&#x27; in sys.modules:
+        import src.data_ingestion
+        importlib.reload(src.data_ingestion)
+
+from src.data_ingestion import ingest_cicids_to_parquet, benchmark_storage, get_raw_dataset_files
 from src.config import PARQUET_DIR
 
 # Ingest and convert CSVs to Parquet (loads cached if already generated)
