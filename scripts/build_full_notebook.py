@@ -26,6 +26,7 @@ def build_notebook():
     builder.add_markdown("""# 🛡️ grIDSentry: High-Throughput Distributed Network Threat & Zero-Day Anomaly Detection System (NIDS)
 **BE Computer Science - Big Data Analytics (BDA) Mini Project**
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raulferns/grIDSentry/blob/v2.0/BDA_MiniProject.ipynb)
 [![Apache Spark](https://img.shields.io/badge/Apache_Spark-4.2_|_PySpark-E25A1C?logo=apachespark&logoColor=white)](https://spark.apache.org/)
 [![Storage](https://img.shields.io/badge/Storage-Snappy_Columnar_Parquet-00D26A?logo=apacheparquet&logoColor=white)](https://parquet.apache.org/)
 [![Analytics](https://img.shields.io/badge/Engine-Spark_SQL_&_MLlib-007ACC?logo=python&logoColor=white)](https://spark.apache.org/mllib/)

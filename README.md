@@ -3,7 +3,7 @@
 **Engine:** Apache Spark 4.2 / PySpark • **Storage:** Columnar Apache Parquet • **Analytics:** Spark SQL • **ML:** Spark MLlib • **Streaming:** Spark Structured Streaming  
 **Dataset:** Canadian Institute for Cybersecurity (CICIDS2017) Benchmark (1.15 GB Real-World PCAP Flows • 3,119,345 Records)  
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raulferns/grIDSentry/blob/main/BDA_MiniProject.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raulferns/grIDSentry/blob/v2.0/BDA_MiniProject.ipynb)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-raulferns%2FgrIDSentry-blue?logo=github)](https://github.com/raulferns/grIDSentry)
 [![Apache Spark](https://img.shields.io/badge/Apache_Spark-4.2_|_PySpark-E25A1C?logo=apachespark&logoColor=white)](https://spark.apache.org/)
 
@@ -134,11 +134,11 @@ BDA_MiniProject/
 ### ⚡ Option A: 1-Click Run in Google Colab (Zero Installation)
 Click the badge below to run the complete pipeline and interactive Spark analysis directly in Google Colab with free Cloud compute:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raulferns/grIDSentry/blob/main/BDA_MiniProject.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raulferns/grIDSentry/blob/v2.0/BDA_MiniProject.ipynb)
 
-1. Open the notebook in Colab.
-2. Run the **Auto-Setup Cell** (Cell 1) — it automatically installs PySpark, clones `grIDSentry`, and configures the environment.
-3. Click **Runtime** > **Run all**.
+1. Open the notebook in Colab via the badge above.
+2. The notebook is 100% self-contained: it auto-installs PySpark and dependencies.
+3. Click **Runtime** > **Run all** (or press Ctrl+F9).
 
 ---
 
