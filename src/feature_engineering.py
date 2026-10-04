@@ -42,10 +42,28 @@ def build_feature_pipeline(df, is_multiclass=False):
     pipeline = Pipeline(stages=stages)
     return pipeline
 
+def sanitize_dataframe(df):
+    """Guarantees 0.0 for any NaN, null, or Infinite values across all feature columns."""
+    from pyspark.sql import functions as F
+    for c in FEATURE_COLS:
+        if c in df.columns:
+            df = df.withColumn(
+                c,
+                F.when(
+                    F.isnan(F.col(c)) | F.col(c).isNull() | (F.col(c) == float('inf')) | (F.col(c) == float('-inf')),
+                    0.0
+                ).otherwise(F.col(c))
+            )
+    return df
+
 def prepare_data_splits(train_df, test_df, is_multiclass=False):
     """
     Fits the feature engineering pipeline on training data and transforms both train and test sets.
     """
+    print(f"[PIPELINE] Sanitizing features against NaN/Infinity values...")
+    train_df = sanitize_dataframe(train_df)
+    test_df = sanitize_dataframe(test_df)
+
     print(f"[PIPELINE] Fitting Spark ML Feature Transformation Pipeline on Real-World Flows...")
     pipeline = build_feature_pipeline(train_df, is_multiclass=is_multiclass)
     fitted_pipeline = pipeline.fit(train_df)

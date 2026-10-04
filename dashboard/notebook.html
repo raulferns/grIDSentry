@@ -338,7 +338,16 @@ spark.sql(&quot;&quot;&quot;
             <div class="nb-cell nb-code-cell">
               <div class="nb-input-area">
                 <div class="nb-prompt">In [9]:</div>
-                <div class="nb-code-box"><pre><code class="language-python">from src.feature_engineering import prepare_data_splits
+                <div class="nb-code-box"><pre><code class="language-python">import sys
+import importlib
+if &#x27;google.colab&#x27; in sys.modules:
+    import urllib.request
+    urllib.request.urlretrieve(&#x27;https://raw.githubusercontent.com/raulferns/grIDSentry/main/src/feature_engineering.py&#x27;, &#x27;src/feature_engineering.py&#x27;)
+    if &#x27;src.feature_engineering&#x27; in sys.modules:
+        import src.feature_engineering
+        importlib.reload(src.feature_engineering)
+
+from src.feature_engineering import prepare_data_splits
 
 # Sample a representative slice of 60,000 flows for fast, accurate distributed training
 sample_df = df.sample(withReplacement=False, fraction=min(1.0, 60000.0 / total_records), seed=42)

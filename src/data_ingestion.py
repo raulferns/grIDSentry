@@ -70,6 +70,15 @@ def ingest_cicids_to_parquet(spark=None, force_reload=False):
     if os.path.exists(parquet_path) and not force_reload:
         print(f"[CACHE] Loading cached columnar Parquet dataset from: {parquet_path}")
         df = spark.read.parquet(parquet_path)
+        for c in FEATURE_COLS:
+            if c in df.columns:
+                df = df.withColumn(
+                    c,
+                    F.when(
+                        F.isnan(F.col(c)) | F.col(c).isNull() | (F.col(c) == float('inf')) | (F.col(c) == float('-inf')),
+                        0.0
+                    ).otherwise(F.col(c))
+                )
         return df
 
     csv_files = get_raw_dataset_files()
@@ -155,13 +164,27 @@ def ingest_cicids_to_parquet(spark=None, force_reload=False):
     # Cast numeric feature columns using try_cast / null-safe float conversion
     for col_name in FEATURE_COLS:
         if col_name in raw_df.columns:
+            trimmed = F.trim(F.col(col_name))
             raw_df = raw_df.withColumn(
                 col_name,
-                F.coalesce(
-                    F.when(F.col(col_name).isin(["Infinity", "NaN", "null", "", " "]), 0.0)
-                     .otherwise(F.expr(f"try_cast({col_name} AS DOUBLE)")),
-                    F.lit(0.0)
+                F.when(
+                    trimmed.isNull() |
+                    (trimmed == "") |
+                    trimmed.isin(["Infinity", "+Infinity", "-Infinity", "inf", "+inf", "-inf", "NaN", "nan", "null", "NULL"]),
+                    0.0
+                ).otherwise(
+                    F.coalesce(F.expr(f"try_cast({col_name} AS DOUBLE)"), F.lit(0.0))
                 )
+            )
+            raw_df = raw_df.withColumn(
+                col_name,
+                F.when(
+                    F.isnan(F.col(col_name)) |
+                    F.col(col_name).isNull() |
+                    (F.col(col_name) == float('inf')) |
+                    (F.col(col_name) == float('-inf')),
+                    0.0
+                ).otherwise(F.col(col_name))
             )
 
     if "dst_port" in raw_df.columns:
