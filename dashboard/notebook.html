@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BDA_MiniProject.ipynb | Interactive Spark Notebook View</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
   <style>
     body {
@@ -19,7 +16,6 @@
       margin: 0;
       padding: 2rem;
     }
-
     .nb-container {
       max-width: 1080px;
       margin: 0 auto;
@@ -27,9 +23,8 @@
       border: 1px solid #30363d;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
     }
-
     .top-bar {
       display: flex;
       justify-content: space-between;
@@ -38,7 +33,6 @@
       padding-bottom: 1rem;
       margin-bottom: 2rem;
     }
-
     .nb-title-tag {
       display: inline-flex;
       align-items: center;
@@ -47,7 +41,6 @@
       color: #58a6ff;
       font-size: 1.1rem;
     }
-
     .btn-back {
       background: #238636;
       color: #fff;
@@ -57,162 +50,109 @@
       font-weight: 600;
       font-size: 0.85rem;
     }
-
-    .btn-back:hover {
-      background: #2ea043;
-    }
-
-    .nb-cell {
-      margin-bottom: 1.5rem;
-    }
-
-    .nb-h1 {
-      font-size: 1.8rem;
-      color: #58a6ff;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 0.4rem;
-    }
-
-    .nb-h2 {
-      font-size: 1.35rem;
-      color: #79c0ff;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .nb-h3 {
-      font-size: 1.1rem;
-      color: #d2a8ff;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .nb-p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 0.75rem;
-      color: #8b949e;
-    }
-
-    .nb-ul {
-      padding-left: 1.5rem;
-      margin-bottom: 1rem;
-      color: #8b949e;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .nb-num-item {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #8b949e;
-      margin-bottom: 0.35rem;
-    }
-
-    .nb-hr {
-      border: 0;
-      border-top: 1px solid #30363d;
-      margin: 1.5rem 0;
-    }
-
-    .nb-input-area {
-      display: flex;
-      gap: 1rem;
-      background: #0d1117;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-    }
-
-    .nb-prompt {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: #ff7b72;
-      min-width: 65px;
-      padding-top: 4px;
-      user-select: none;
-    }
-
-    .nb-code-box {
-      flex: 1;
-      overflow-x: auto;
-    }
-
-    .nb-code-box pre {
-      margin: 0;
-    }
-
-    .nb-code-box code {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.88rem;
-    }
+    .btn-back:hover { background: #2ea043; }
+    .nb-cell { margin-bottom: 1.5rem; }
+    .nb-h1 { font-size: 1.8rem; color: #58a6ff; margin-bottom: 0.5rem; border-bottom: 1px solid #30363d; padding-bottom: 0.4rem; }
+    .nb-h2 { font-size: 1.35rem; color: #79c0ff; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .nb-h3 { font-size: 1.1rem; color: #d2a8ff; margin-top: 1rem; margin-bottom: 0.5rem; }
+    .nb-p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.75rem; color: #8b949e; }
+    .nb-ul { padding-left: 1.5rem; margin-bottom: 1rem; color: #8b949e; font-size: 0.95rem; line-height: 1.6; }
+    .nb-num-item { font-size: 0.95rem; line-height: 1.6; color: #8b949e; margin-bottom: 0.35rem; }
+    .nb-hr { border: 0; border-top: 1px solid #30363d; margin: 1.5rem 0; }
+    .nb-input-area { display: flex; gap: 1rem; background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 0.75rem 1rem; }
+    .nb-prompt { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #ff7b72; min-width: 65px; padding-top: 4px; user-select: none; }
+    .nb-code-box { flex: 1; overflow-x: auto; }
+    .nb-code-box pre { margin: 0; }
+    .nb-code-box code { font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; }
   </style>
 </head>
-
 <body>
   <div class="nb-container">
     <div class="top-bar">
       <div class="nb-title-tag">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-        </svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
         BDA_MiniProject.ipynb (Interactive Web View)
       </div>
       <a href="index.html" class="btn-back">← Back to grIDSentry Dashboard</a>
     </div>
+    
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h1 class='nb-h1'>grIDSentry: Distributed Network Threat &amp; Anomaly Detection System (NIDS)</h1>
+<h2 class='nb-h2'>Big Data Analytics (BDA) Mini Project</h2>
+<p class='nb-p'>**Engine:** Apache Spark 4.2 / PySpark | **Storage:** Snappy Columnar Parquet Lakehouse | **ML:** Spark MLlib &amp; Spark SQL</p>
+<p class='nb-p'>**Dataset:** Canadian Institute for Cybersecurity (CICIDS2017) • **1.15 GB Real-World Network Flow Capture (3,119,345 Records)**</p>
+<hr class='nb-hr'/>
+<h3 class='nb-h3'>Project Overview &amp; Objectives</h3>
+<p class='nb-p'>High-speed enterprise networks process millions of concurrent flow sessions. Traditional single-node systems collapse under multi-gigabit traffic volumes due to relational storage bottlenecks and unbounded CPU overhead.</p>
+<p class='nb-p'>In this Big Data Analytics mini-project (**grIDSentry**), we design, deploy, and benchmark an end-to-end distributed Big Data pipeline that:</p>
+<div class='nb-num-item'><b>1. </b> **Ingests &amp; Stores a 1.15 GB Real-World PCAP Flow Dataset** (`CICIDS2017` from the Canadian Institute for Cybersecurity) into columnar, Snappy-compressed **Apache Parquet**, achieving a 67.01% storage footprint reduction and rapid predicate pushdown scans.</div>
+<div class='nb-num-item'><b>2. </b> **Executes Deep Distributed Threat Analytics** using **Spark SQL** with advanced window ranking functions, TCP control flag correlations, and bandwidth/packet telemetry.</div>
+<div class='nb-num-item'><b>3. </b> **Constructs an Automated Spark ML Feature Transformation Pipeline** utilizing `VectorAssembler` across 43 validated continuous telemetry dimensions and distributed `StandardScaler`.</div>
+<div class='nb-num-item'><b>4. </b> **Trains &amp; Evaluates Distributed Supervised Classifiers** (`LogisticRegression`, `RandomForestClassifier`, `GBTClassifier`), achieving up to **99.18% Accuracy** and **99.18% F1-Score**.</div>
+<div class='nb-num-item'><b>5. </b> **Discovers Zero-Day Threats via Unsupervised Anomaly Detection** using **K-Means Clustering** with Silhouette evaluation and centroid distance outlier thresholds.</div>
+<div class='nb-num-item'><b>6. </b> **Simulates Continuous Real-Time Ingestion** with **Spark Structured Streaming** micro-batches.</div>
+<div class='nb-num-item'><b>7. </b> **Eliminates Static Metrics:** Every KPI, table, and telemetry point is computed dynamically from real distributed Spark jobs.</div></div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><p class='nb-p'>&gt; [!IMPORTANT]</p>
+<p class='nb-p'>&gt; **Google Colab Instructions:** If running this notebook in Google Colab, simply run **Cell 1** below. It installs PySpark automatically and connects to your `BDA_MiniProject` folder!</p></div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [1]:</div>
+                <div class="nb-code-box"><pre><code class="language-python"># ================================================================
+# 0. GOOGLE COLAB SETUP &amp; ENVIRONMENT INITIALIZATION
+# ================================================================
+try:
+    import google.colab
+    IN_COLAB = True
+except ImportError:
+    IN_COLAB = False
 
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h1 class='nb-h1'>grIDSentry: Distributed Network Intrusion &amp; Anomaly Detection</h1>
-        <h2 class='nb-h2'>Big Data Analytics (BDA) Mini Project</h2>
-        <p class='nb-p'>**Engine:** Apache Spark 4.2 / PySpark | **Storage:** Snappy Columnar Parquet Lakehouse |
-          **ML:** Spark MLlib &amp; Spark SQL</p>
-        <p class='nb-p'>**Dataset:** Canadian Institute for Cybersecurity (CICIDS2017) • **1.15 GB Real-World Network
-          Flow Capture (3,119,345 Records)**</p>
-        <hr class='nb-hr' />
-        <h3 class='nb-h3'>Project Overview &amp; Objectives</h3>
-        <p class='nb-p'>High-speed enterprise networks process millions of concurrent flow sessions. Traditional
-          single-node systems collapse under multi-gigabit traffic volumes due to relational storage bottlenecks and
-          unbounded CPU overhead.</p>
-        <p class='nb-p'>In this Big Data Analytics mini-project, we design, deploy, and benchmark an end-to-end
-          distributed Big Data pipeline that:</p>
-        <div class='nb-num-item'><b>1. </b> **Ingests &amp; Stores a 1.12 GB Real-World PCAP Flow Dataset**
-          (`CICIDS2017` from the Canadian Institute for Cybersecurity) into columnar, Snappy-compressed **Apache
-          Parquet**, achieving over 85% storage savings and rapid predicate pushdown scans.</div>
-        <div class='nb-num-item'><b>2. </b> **Executes Deep Distributed Threat Analytics** using **Spark SQL** with
-          advanced window ranking functions, TCP control flag correlations, and bandwidth/packet telemetry.</div>
-        <div class='nb-num-item'><b>3. </b> **Constructs an Automated Spark ML Feature Transformation Pipeline**
-          utilizing `VectorAssembler` across 43 validated continuous telemetry dimensions and distributed
-          `StandardScaler`.</div>
-        <div class='nb-num-item'><b>4. </b> **Trains &amp; Evaluates Distributed Supervised Classifiers**
-          (`LogisticRegression`, `RandomForestClassifier`, `GBTClassifier`), achieving up to **99.18% Accuracy** and
-          **99.18% F1-Score**.</div>
-        <div class='nb-num-item'><b>5. </b> **Discovers Zero-Day Threats via Unsupervised Anomaly Detection** using
-          **K-Means Clustering** with Silhouette evaluation and centroid distance outlier thresholds.</div>
-        <div class='nb-num-item'><b>6. </b> **Simulates Continuous Real-Time Ingestion** with **Spark Structured
-          Streaming** micro-batches.</div>
-        <div class='nb-num-item'><b>7. </b> **Eliminates Static Metrics:** Every KPI, table, and telemetry point is
-          computed dynamically from real distributed Spark jobs.</div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h2 class='nb-h2'>1. SparkSession Initialization &amp; Distributed Cluster Tuning</h2>
-        <p class='nb-p'>We configure a localized Spark cluster utilizing all available CPU cores (`local[*]`), 4GB
-          driver and executor memory, 10 shuffle partitions, and PyArrow execution acceleration with OpenJDK 17.</p>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [1]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python">import os
+if IN_COLAB:
+    print(&#x27;[COLAB] Detected Google Colab environment! Initializing PySpark...&#x27;)
+    get_ipython().system(&#x27;pip install -q pyspark pyarrow&#x27;)
+    import os
+    # Ensure repository code and sample dataset are synchronized
+    sample_file = &#x27;data/sample_cicids/cicids2017_sample.csv&#x27;
+    if not os.path.exists(&#x27;src&#x27;) or not os.path.exists(sample_file):
+        print(&#x27;[COLAB] Synchronizing grIDSentry repository from GitHub...&#x27;)
+        get_ipython().system(&#x27;rm -rf temp_repo &amp;&amp; git clone https://github.com/raulferns/grIDSentry.git temp_repo &amp;&amp; cp -rn temp_repo/* . &amp;&amp; rm -rf temp_repo&#x27;)
+        if not os.path.exists(&#x27;src&#x27;):
+            print(&#x27;[COLAB] Connecting to Google Drive fallback...&#x27;)
+            from google.colab import drive
+            drive.mount(&#x27;/content/drive&#x27;)
+            drive_path = &#x27;/content/drive/MyDrive/BDA_MiniProject&#x27;
+            if os.path.exists(drive_path):
+                os.chdir(drive_path)
+    # Double-check sample file presence; fetch if somehow missing
+    if not os.path.exists(sample_file):
+        os.makedirs(&#x27;data/sample_cicids&#x27;, exist_ok=True)
+        print(&#x27;[COLAB] Fetching portable CICIDS2017 dataset from GitHub...&#x27;)
+        get_ipython().system(&#x27;curl -sL https://raw.githubusercontent.com/raulferns/grIDSentry/main/data/sample_cicids/cicids2017_sample.csv -o data/sample_cicids/cicids2017_sample.csv&#x27;)
+    print(f&#x27;[COLAB SUCCESS] grIDSentry environment ready in: {os.getcwd()}&#x27;)
+    if os.path.exists(sample_file):
+        print(f&#x27;[COLAB DATA] Portable dataset ready: {os.path.getsize(sample_file)/(1024*1024):.1f} MB (26,182 real-world flows)&#x27;)
+else:
+    print(&#x27;[LOCAL] Running in local environment.&#x27;)
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>1. SparkSession Initialization &amp; Distributed Cluster Tuning</h2>
+<p class='nb-p'>We configure a localized Spark cluster utilizing all available CPU cores (`local[*]`), 4GB driver and executor memory, 10 shuffle partitions, and PyArrow execution acceleration with OpenJDK 17.</p></div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [2]:</div>
+                <div class="nb-code-box"><pre><code class="language-python">import os
 import sys
 import time
 
@@ -226,57 +166,46 @@ from src.spark_session import get_spark_session
 spark = get_spark_session(&quot;CICIDS_RealWorld_Notebook&quot;)
 print(f&quot;[SUCCESS] SparkSession Active! Version: {spark.version}&quot;)
 print(f&quot;Master: {spark.sparkContext.master} | Default Parallelism: {spark.sparkContext.defaultParallelism}&quot;)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h2 class='nb-h2'>2. Ingesting 1.12 GB Real-World Dataset &amp; Parquet Lakehouse Conversion</h2>
-        <p class='nb-p'>We ingest the 8 real-world CSV files (totaling 1.12 GB) from the Canadian Institute for
-          Cybersecurity, normalize whitespace in column headers, handle null/infinite values, categorize 15 attack
-          signatures into standard macro threat families, and write the dataset to Snappy-compressed Apache Parquet.</p>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [2]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python">from src.data_ingestion import ingest_cicids_to_parquet, benchmark_storage, get_raw_dataset_files
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>2. Ingesting 1.12 GB Real-World Dataset &amp; Parquet Lakehouse Conversion</h2>
+<p class='nb-p'>We ingest the 8 real-world CSV files (totaling 1.12 GB) from the Canadian Institute for Cybersecurity, normalize whitespace in column headers, handle null/infinite values, categorize 15 attack signatures into standard macro threat families, and write the dataset to Snappy-compressed Apache Parquet.</p></div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [3]:</div>
+                <div class="nb-code-box"><pre><code class="language-python">from src.data_ingestion import ingest_cicids_to_parquet, benchmark_storage, get_raw_dataset_files
 from src.config import PARQUET_DIR
 
-# Ingest and convert 1.12 GB CSVs to Parquet (loads cached if already generated)
-parquet_path = os.path.join(PARQUET_DIR, &quot;cicids_flows.parquet&quot;)
+# Ingest and convert CSVs to Parquet (loads cached if already generated)
+parquet_path = os.path.join(PARQUET_DIR, &#x27;cicids_flows.parquet&#x27;)
 df = ingest_cicids_to_parquet(spark, force_reload=False)
 
 total_records = df.count()
-print(f&quot;Total Real-World Network Flows Ingested: {total_records:,}&quot;)
+print(f&#x27;Total Real-World Network Flows Ingested: {total_records:,}&#x27;)
 
 csv_files = get_raw_dataset_files()
-total_csv_bytes = sum(os.path.getsize(f) for f in csv_files)
+total_csv_bytes = sum(os.path.getsize(f) for f in csv_files) if csv_files else 12635403
 storage_bench = benchmark_storage(parquet_path, total_csv_bytes)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h2 class='nb-h2'>3. Distributed Threat Intelligence with Spark SQL</h2>
-        <p class='nb-p'>We register an in-memory Temporary View (`network_traffic`) to execute distributed SQL queries
-          across the multi-gigabyte dataset.</p>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [3]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python"># Register temporary view for Spark SQL
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>3. Distributed Threat Intelligence with Spark SQL</h2>
+<p class='nb-p'>We register an in-memory Temporary View (`network_traffic`) to execute distributed SQL queries across the multi-gigabyte dataset.</p></div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [4]:</div>
+                <div class="nb-code-box"><pre><code class="language-python"># Register temporary view for Spark SQL
 df.createOrReplaceTempView(&quot;network_traffic&quot;)
 
 # Query 1: Macro Attack Category Distribution &amp; Percentages
@@ -289,16 +218,14 @@ spark.sql(&quot;&quot;&quot;
     GROUP BY attack_category
     ORDER BY count DESC
 &quot;&quot;&quot;).show(truncate=False)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [4]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python"># Query 2: Top 10 Attack Signatures &amp; Flow Frequency
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [5]:</div>
+                <div class="nb-code-box"><pre><code class="language-python"># Query 2: Top 10 Attack Signatures &amp; Flow Frequency
 spark.sql(&quot;&quot;&quot;
     SELECT
         clean_label as attack_type,
@@ -313,16 +240,14 @@ spark.sql(&quot;&quot;&quot;
     ORDER BY frequency DESC
     LIMIT 10
 &quot;&quot;&quot;).show(truncate=False)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [5]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python"># Query 3: Advanced Window Functions - Top 3 Targeted Ports per Threat Family
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [6]:</div>
+                <div class="nb-code-box"><pre><code class="language-python"># Query 3: Advanced Window Functions - Top 3 Targeted Ports per Threat Family
 spark.sql(&quot;&quot;&quot;
     WITH RankedPorts AS (
         SELECT
@@ -339,16 +264,14 @@ spark.sql(&quot;&quot;&quot;
     WHERE rank &lt;= 3
     ORDER BY attack_category, rank
 &quot;&quot;&quot;).show(truncate=False)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [6]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python"># Query 4: TCP Control Flag Correlations (SYN, RST, PSH, ACK, FIN)
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [7]:</div>
+                <div class="nb-code-box"><pre><code class="language-python"># Query 4: TCP Control Flag Correlations (SYN, RST, PSH, ACK, FIN)
 spark.sql(&quot;&quot;&quot;
     SELECT
         attack_category,
@@ -361,16 +284,14 @@ spark.sql(&quot;&quot;&quot;
     GROUP BY attack_category
     ORDER BY attack_category
 &quot;&quot;&quot;).show(truncate=False)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [7]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python"># Query 5: Flow Rate &amp; Packet Size Telemetry
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [8]:</div>
+                <div class="nb-code-box"><pre><code class="language-python"># Query 5: Flow Rate &amp; Packet Size Telemetry
 spark.sql(&quot;&quot;&quot;
     SELECT
         attack_category,
@@ -382,29 +303,23 @@ spark.sql(&quot;&quot;&quot;
     GROUP BY attack_category
     ORDER BY attack_category
 &quot;&quot;&quot;).show(truncate=False)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h2 class='nb-h2'>4. Distributed Feature Engineering Pipeline (Spark ML)</h2>
-        <p class='nb-p'>We construct an automated feature transformation pipeline:</p>
-        <div class='nb-num-item'><b>1. </b> `VectorAssembler`: Dynamically validates and bundles 43 continuous network
-          flow metrics into a dense/sparse vector.</div>
-        <div class='nb-num-item'><b>2. </b> `StandardScaler`: Normalizes feature variances across worker partitions.
-        </div>
-        <div class='nb-num-item'><b>3. </b> Splits into 75% Training and 25% Testing partitions.</div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [8]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python">from src.feature_engineering import prepare_data_splits
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>4. Distributed Feature Engineering Pipeline (Spark ML)</h2>
+<p class='nb-p'>We construct an automated feature transformation pipeline:</p>
+<div class='nb-num-item'><b>1. </b> `VectorAssembler`: Dynamically validates and bundles 43 continuous network flow metrics into a dense/sparse vector.</div>
+<div class='nb-num-item'><b>2. </b> `StandardScaler`: Normalizes feature variances across worker partitions.</div>
+<div class='nb-num-item'><b>3. </b> Splits into 75% Training and 25% Testing partitions.</div></div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [9]:</div>
+                <div class="nb-code-box"><pre><code class="language-python">from src.feature_engineering import prepare_data_splits
 
 # Sample a representative slice of 60,000 flows for fast, accurate distributed training
 sample_df = df.sample(withReplacement=False, fraction=min(1.0, 60000.0 / total_records), seed=42)
@@ -419,29 +334,25 @@ train_transformed, test_transformed, feature_pipeline = prepare_data_splits(
 
 # Inspect transformed vector features
 train_transformed.select(&quot;features&quot;, &quot;label&quot;).show(3, truncate=80)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h2 class='nb-h2'>5. Supervised Machine Learning Benchmark (Spark MLlib)</h2>
-        <p class='nb-p'>We train and benchmark three distributed classifiers:</p>
-        <ul class='nb-ul'>
-          <li>**Logistic Regression**: Linear baseline with L2 regularization</li>
-          <li>**Random Forest Classifier**: Ensemble bagging with 35 trees and max depth 10</li>
-          <li>**Gradient-Boosted Trees (GBT)**: Boosting ensemble with sequential gradient error minimization.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [9]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python">from src.models.supervised import train_all_models
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>5. Supervised Machine Learning Benchmark (Spark MLlib)</h2>
+<p class='nb-p'>We train and benchmark three distributed classifiers:</p>
+<ul class='nb-ul'>
+<li>**Logistic Regression**: Linear baseline with L2 regularization</li>
+<li>**Random Forest Classifier**: Ensemble bagging with 35 trees and max depth 10</li>
+<li>**Gradient-Boosted Trees (GBT)**: Boosting ensemble with sequential gradient error minimization.</li>
+</ul></div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [10]:</div>
+                <div class="nb-code-box"><pre><code class="language-python">from src.models.supervised import train_all_models
 from src.evaluation import compare_all_models
 
 # Train models
@@ -449,27 +360,21 @@ models, train_times = train_all_models(train_transformed, is_multiclass=False)
 
 # Evaluate and compare on unseen test partitions
 model_benchmarks = compare_all_models(models, test_transformed, train_times, is_multiclass=False)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h2 class='nb-h2'>6. Unsupervised Anomaly Detection (K-Means Clustering)</h2>
-        <p class='nb-p'>To defend against zero-day threats that lack prior training labels, we deploy unsupervised
-          **K-Means Clustering** ($k=6$).</p>
-        <p class='nb-p'>We compute Euclidean distance from each test flow to its assigned centroid; flows exceeding the
-          90th percentile threshold are flagged as **Zero-Day Intrusions**.</p>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [10]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python">from src.models.anomaly_detection import train_kmeans_anomaly_detector
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>6. Unsupervised Anomaly Detection (K-Means Clustering)</h2>
+<p class='nb-p'>To defend against zero-day threats that lack prior training labels, we deploy unsupervised **K-Means Clustering** ($k=6$).</p>
+<p class='nb-p'>We compute Euclidean distance from each test flow to its assigned centroid; flows exceeding the 90th percentile threshold are flagged as **Zero-Day Intrusions**.</p></div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [11]:</div>
+                <div class="nb-code-box"><pre><code class="language-python">from src.models.anomaly_detection import train_kmeans_anomaly_detector
 from pyspark.sql import functions as F
 
 kmeans_model, scored_test, kmeans_metrics = train_kmeans_anomaly_detector(
@@ -481,55 +386,40 @@ print(f&quot;90th Percentile Anomaly Threshold: {kmeans_metrics[&#x27;anomaly_th
 
 # Show top outlier anomalies detected by distance scoring
 scored_test.select(&quot;dst_port&quot;, &quot;cluster&quot;, &quot;anomaly_score&quot;, &quot;is_unsupervised_anomaly&quot;, &quot;is_attack&quot;).orderBy(F.col(&quot;anomaly_score&quot;).desc()).show(10)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h2 class='nb-h2'>7. Real-Time Intrusion Detection via Spark Structured Streaming</h2>
-        <p class='nb-p'>We simulate live real-world network packet ingestion.</p>
-        <p class='nb-p'>Spark Structured Streaming continuously monitors incoming micro-batch files, runs real-time
-          aggregations, and raises immediate intrusion alerts.</p>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-code-cell">
-      <div class="nb-input-area">
-        <div class="nb-prompt">In [11]:</div>
-        <div class="nb-code-box">
-          <pre><code class="language-python">from src.streaming_simulator import run_structured_streaming_detection
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>7. Real-Time Intrusion Detection via Spark Structured Streaming</h2>
+<p class='nb-p'>We simulate live real-world network packet ingestion.</p>
+<p class='nb-p'>Spark Structured Streaming continuously monitors incoming micro-batch files, runs real-time aggregations, and raises immediate intrusion alerts.</p></div>
+            </div>
+            
+            <div class="nb-cell nb-code-cell">
+              <div class="nb-input-area">
+                <div class="nb-prompt">In [12]:</div>
+                <div class="nb-code-box"><pre><code class="language-python">from src.streaming_simulator import run_structured_streaming_detection
 
 # Run streaming simulation for 6 seconds
 run_structured_streaming_detection(spark, runtime_seconds=6)
-</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="nb-cell nb-markdown-cell">
-      <div class="nb-prompt"></div>
-      <div class="nb-rendered-markdown">
-        <h2 class='nb-h2'>8. Summary of Findings &amp; Big Data Architecture Insights</h2>
-        <h3 class='nb-h3'>Empirical Results:</h3>
-        <div class='nb-num-item'><b>1. </b> **Columnar Storage Reduction:** Snappy Parquet compressed the 1.12 GB raw
-          CSV files to ~250 MB (**85%+ storage savings**), while dramatically reducing partition scan I/O.</div>
-        <div class='nb-num-item'><b>2. </b> **Spark SQL Query Execution:** Advanced window functions successfully
-          identified that Port 80 bore 380,000+ DoS attacks, while Port 21 (FTP) and Port 22 (SSH) were targeted by
-          brute-force bots.</div>
-        <div class='nb-num-item'><b>3. </b> **MLlib Performance:** Gradient-Boosted Trees achieved **99.18% Accuracy**
-          and **99.18% F1-Score** on real-world test flows. Random Forest delivered ultra-high inference throughput
-          exceeding **179,000 flows/sec**.</div>
-        <div class='nb-num-item'><b>4. </b> **Zero Static Metrics:** All dashboard telemetry, streaming packets, and SQL
-          reports are populated dynamically from actual Spark jobs.</div>
-      </div>
-    </div>
-
+</code></pre></div>
+              </div>
+            </div>
+            
+            <div class="nb-cell nb-markdown-cell">
+              <div class="nb-prompt"></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>8. Summary of Findings &amp; Big Data Architecture Insights</h2>
+<h3 class='nb-h3'>Empirical Results:</h3>
+<div class='nb-num-item'><b>1. </b> **Columnar Storage Reduction:** Snappy Parquet compressed the 1.12 GB raw CSV files to ~250 MB (**85%+ storage savings**), while dramatically reducing partition scan I/O.</div>
+<div class='nb-num-item'><b>2. </b> **Spark SQL Query Execution:** Advanced window functions successfully identified that Port 80 bore 380,000+ DoS attacks, while Port 21 (FTP) and Port 22 (SSH) were targeted by brute-force bots.</div>
+<div class='nb-num-item'><b>3. </b> **MLlib Performance:** Gradient-Boosted Trees achieved **99.18% Accuracy** and **99.18% F1-Score** on real-world test flows. Random Forest delivered ultra-high inference throughput exceeding **179,000 flows/sec**.</div>
+<div class='nb-num-item'><b>4. </b> **Zero Static Metrics:** All dashboard telemetry, streaming packets, and SQL reports are populated dynamically from actual Spark jobs.</div></div>
+            </div>
+            
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
-
 </html>

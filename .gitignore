@@ -3,8 +3,12 @@ data/raw_cicids/
 data/parquet_cicids/
 data/streaming/checkpoints/
 *.parquet
-*.csv
 *.zip
+
+# Ignore massive raw CSVs but keep portable sample CSV for Colab/Demo
+data/raw_cicids/*.csv
+*.csv
+!data/sample_cicids/cicids2017_sample.csv
 
 # Python Bytecode & Environments
 __pycache__/
@@ -20,3 +24,4 @@ env/
 Thumbs.db
 desktop.ini
 *.log
+.agents/

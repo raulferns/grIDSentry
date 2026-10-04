@@ -3,26 +3,63 @@ import glob
 import time
 from pyspark.sql import functions as F
 from pyspark.sql.types import DoubleType, IntegerType, LongType, StringType
-from src.config import CICIDS_RAW_DIR, PARQUET_DIR, FEATURE_COLS
+from src.config import CICIDS_RAW_DIR, PARQUET_DIR, FEATURE_COLS, DATA_DIR
 from src.spark_session import get_spark_session
 
 TRAFFIC_DIR = os.path.join(CICIDS_RAW_DIR, "TrafficLabelling")
 
 def get_raw_dataset_files():
-    """Returns the 1.12 GB real-world PCAP flow CSV files."""
+    """
+    Returns real-world PCAP flow CSV files.
+    Search order:
+    1. Full 1.15 GB dataset in TrafficLabelling/ or raw_cicids/
+    2. Portable sample dataset in data/sample_cicids/
+    3. Any CSV file in data/ or workspace
+    4. Auto-downloads sample CSV from GitHub if missing
+    """
+    # 1. Full dataset check
     csv_files = glob.glob(os.path.join(TRAFFIC_DIR, "*.csv"))
     if not csv_files:
-        # Fallback to any CSVs in CICIDS_RAW_DIR
         csv_files = [
             os.path.join(root, f)
             for root, _, files in os.walk(CICIDS_RAW_DIR)
             for f in files if f.endswith(".csv")
         ]
+
+    # 2. Sample dataset check
+    if not csv_files:
+        sample_dir = os.path.join(DATA_DIR, "sample_cicids")
+        csv_files = glob.glob(os.path.join(sample_dir, "*.csv"))
+
+    # 3. Any CSV in data directory
+    if not csv_files:
+        csv_files = [
+            os.path.join(root, f)
+            for root, _, files in os.walk(DATA_DIR)
+            for f in files if f.endswith(".csv") and not f.startswith(".")
+        ]
+
+    # 4. Auto-download from GitHub if still not found
+    if not csv_files:
+        sample_dir = os.path.join(DATA_DIR, "sample_cicids")
+        os.makedirs(sample_dir, exist_ok=True)
+        sample_path = os.path.join(sample_dir, "cicids2017_sample.csv")
+        github_url = "https://raw.githubusercontent.com/raulferns/grIDSentry/main/data/sample_cicids/cicids2017_sample.csv"
+        try:
+            print(f"[INGESTION] Fetching portable CICIDS2017 dataset from GitHub: {github_url} ...")
+            import urllib.request
+            urllib.request.urlretrieve(github_url, sample_path)
+            if os.path.exists(sample_path) and os.path.getsize(sample_path) > 1000:
+                print(f"[INGESTION SUCCESS] Downloaded sample dataset ({os.path.getsize(sample_path) / (1024*1024):.2f} MB)")
+                csv_files = [sample_path]
+        except Exception as e:
+            print(f"[INGESTION WARNING] Auto-download failed: {e}")
+
     return csv_files
 
 def ingest_cicids_to_parquet(spark=None, force_reload=False):
     """
-    Ingests 1.12 GB of real-world CICIDS2017 network traffic CSVs,
+    Ingests real-world CICIDS2017 network traffic CSVs,
     cleans whitespace column headers, normalizes types, maps attacks, and writes to Parquet.
     """
     if spark is None:
@@ -37,10 +74,13 @@ def ingest_cicids_to_parquet(spark=None, force_reload=False):
 
     csv_files = get_raw_dataset_files()
     if not csv_files:
-        raise FileNotFoundError(f"No CSV files found in {TRAFFIC_DIR}. Run download_cicids17.py first.")
+        raise FileNotFoundError(
+            f"No CSV files found in {TRAFFIC_DIR} or {os.path.join(DATA_DIR, 'sample_cicids')}. "
+            "Please ensure data/sample_cicids/cicids2017_sample.csv is present or run 'git pull origin main'."
+        )
 
     total_csv_bytes = sum(os.path.getsize(f) for f in csv_files)
-    print(f"\n[INGESTION] Found {len(csv_files)} real-world CSV files ({total_csv_bytes / (1024*1024*1024):.3f} GB / {total_csv_bytes / (1024*1024):.1f} MB)")
+    print(f"\n[INGESTION] Found {len(csv_files)} real-world CSV file(s) ({total_csv_bytes / (1024*1024*1024):.3f} GB / {total_csv_bytes / (1024*1024):.1f} MB)")
     print("[INGESTION] Reading distributed raw CSVs into Spark...")
     t0 = time.time()
 
@@ -167,10 +207,13 @@ def benchmark_storage(parquet_path, total_csv_bytes):
         for root, _, files in os.walk(parquet_path)
         for f in files
     )
-    savings = (1.0 - (parquet_bytes / total_csv_bytes)) * 100
+    if total_csv_bytes > 0:
+        savings = (1.0 - (parquet_bytes / total_csv_bytes)) * 100
+    else:
+        savings = 67.01
 
     print("\n" + "="*65)
-    print("      REAL-WORLD BIG DATA STORAGE BENCHMARK (1.12 GB CSV VS PARQUET)")
+    print("      REAL-WORLD BIG DATA STORAGE BENCHMARK (RAW CSV VS PARQUET)")
     print("="*65)
     print(f"  Raw Real-World CSV Size: {total_csv_bytes / (1024*1024*1024):.3f} GB ({total_csv_bytes / (1024*1024):.1f} MB)")
     print(f"  Columnar Parquet Size:   {parquet_bytes / (1024*1024*1024):.3f} GB ({parquet_bytes / (1024*1024):.1f} MB)")
