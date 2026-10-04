@@ -64,12 +64,36 @@ def render_notebook_to_html():
 
         elif cell_type == "code":
             escaped_code = html.escape(raw_source)
+            cell_outputs_html = []
+            for out in cell.get("outputs", []):
+                otype = out.get("output_type")
+                if otype == "stream":
+                    stream_text = "".join(out.get("text", []))
+                    escaped_stream = html.escape(stream_text)
+                    cell_outputs_html.append(f"""
+                    <div class="nb-output-stream"><pre>{escaped_stream}</pre></div>
+                    """)
+                elif otype in ["display_data", "execute_result"]:
+                    data = out.get("data", {})
+                    if "image/png" in data:
+                        img_b64 = data["image/png"]
+                        cell_outputs_html.append(f"""
+                        <div class="nb-output-image"><img src="data:image/png;base64,{img_b64}" alt="Cell Plot" /></div>
+                        """)
+                    elif "text/plain" in data:
+                        plain_text = "".join(data["text/plain"])
+                        cell_outputs_html.append(f"""
+                        <div class="nb-output-stream"><pre>{html.escape(plain_text)}</pre></div>
+                        """)
+
+            outputs_rendered = "".join(cell_outputs_html)
             cells_html.append(f"""
             <div class="nb-cell nb-code-cell">
               <div class="nb-input-area">
                 <div class="nb-prompt">In [{cell_idx}]:</div>
                 <div class="nb-code-box"><pre><code class="language-python">{escaped_code}</code></pre></div>
               </div>
+              {f'<div class="nb-output-area">{outputs_rendered}</div>' if outputs_rendered.strip() else ''}
             </div>
             """)
             cell_idx += 1
@@ -140,6 +164,11 @@ def render_notebook_to_html():
     .nb-code-box {{ flex: 1; overflow-x: auto; }}
     .nb-code-box pre {{ margin: 0; }}
     .nb-code-box code {{ font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; }}
+    .nb-output-area {{ margin-top: 0.75rem; padding-left: 75px; }}
+    .nb-output-stream {{ background: #090d13; border: 1px solid #21262d; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 0.75rem; overflow-x: auto; }}
+    .nb-output-stream pre {{ margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #7ee787; line-height: 1.5; }}
+    .nb-output-image {{ margin-top: 0.75rem; text-align: center; }}
+    .nb-output-image img {{ max-width: 100%; border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 16px rgba(0,0,0,0.4); }}
   </style>
 </head>
 <body>

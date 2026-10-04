@@ -25,3 +25,6 @@ Thumbs.db
 desktop.ini
 *.log
 .agents/
+
+# Reference materials from other groups
+Air_Quality_PySpark_Expanded.ipynb

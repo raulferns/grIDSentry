@@ -1,0 +1,100 @@
+{"dst_port": 53, "flow_duration": 53455.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 56.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 66023950.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 96.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 23382.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 44.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 8875399.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 98.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 53, "flow_duration": 11275989.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 91.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 6280596.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 1189.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 48094.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 56.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 240.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 443, "flow_duration": 20177731.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 1389.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 50437, "flow_duration": 998660.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 217.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 80, "flow_duration": 115605287.0, "total_fwd_packets": 17.0, "total_len_fwd_pkts": 359.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 22, "flow_duration": 155.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 3715703.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 141.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 70144468.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 108.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 221.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 80, "flow_duration": 397884.0, "total_fwd_packets": 5.0, "total_len_fwd_pkts": 432.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 4066.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 6205893.0, "total_fwd_packets": 11.0, "total_len_fwd_pkts": 2654.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 21355.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 60460480.0, "total_fwd_packets": 13.0, "total_len_fwd_pkts": 990.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 51020, "flow_duration": 5819777.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 116522605.0, "total_fwd_packets": 21.0, "total_len_fwd_pkts": 1374.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 49747, "flow_duration": 4.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 37.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 974.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 128.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 6627971.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 95.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 52911.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 44.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 115302959.0, "total_fwd_packets": 16.0, "total_len_fwd_pkts": 456.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 50633, "flow_duration": 191.0, "total_fwd_packets": 3.0, "total_len_fwd_pkts": 77.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 314.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 53, "flow_duration": 4938741.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 96.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 5227213.0, "total_fwd_packets": 10.0, "total_len_fwd_pkts": 1436.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 13755675.0, "total_fwd_packets": 11.0, "total_len_fwd_pkts": 3734.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 9352121.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 101.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 443, "flow_duration": 116747748.0, "total_fwd_packets": 21.0, "total_len_fwd_pkts": 1521.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 22, "flow_duration": 166.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 102383.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 64.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 273.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 53, "flow_duration": 10593843.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 100.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 116954781.0, "total_fwd_packets": 41.0, "total_len_fwd_pkts": 1106.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 118024641.0, "total_fwd_packets": 16.0, "total_len_fwd_pkts": 1048.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 75230570.0, "total_fwd_packets": 11.0, "total_len_fwd_pkts": 972.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 541.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 62.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 112308793.0, "total_fwd_packets": 17.0, "total_len_fwd_pkts": 854.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 23822.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 52.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 5573603.0, "total_fwd_packets": 3.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 333431.0, "total_fwd_packets": 11.0, "total_len_fwd_pkts": 570.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 114964191.0, "total_fwd_packets": 17.0, "total_len_fwd_pkts": 4507.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 25907.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 66.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 190.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 9131450.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 106.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8761622.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 108.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 443, "flow_duration": 115354442.0, "total_fwd_packets": 24.0, "total_len_fwd_pkts": 3932.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 443, "flow_duration": 39920310.0, "total_fwd_packets": 77.0, "total_len_fwd_pkts": 1681.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 8905591.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 103.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 443, "flow_duration": 204060.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 862.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 6001111.0, "total_fwd_packets": 6.0, "total_len_fwd_pkts": 599.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 116703347.0, "total_fwd_packets": 19.0, "total_len_fwd_pkts": 853.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 51538, "flow_duration": 3448.0, "total_fwd_packets": 3.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 37801.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 187.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 84.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 31577.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 88.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 175649.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 55.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 47925.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 47.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 23658.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 55.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 5547669.0, "total_fwd_packets": 3.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 67036559.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 96.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 62442202.0, "total_fwd_packets": 11.0, "total_len_fwd_pkts": 2232.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 116284638.0, "total_fwd_packets": 18.0, "total_len_fwd_pkts": 1253.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 470.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 51.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 23418.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 43.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 5091180.0, "total_fwd_packets": 6.0, "total_len_fwd_pkts": 599.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 116606658.0, "total_fwd_packets": 18.0, "total_len_fwd_pkts": 4086.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 243.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 49870, "flow_duration": 62.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 116163446.0, "total_fwd_packets": 21.0, "total_len_fwd_pkts": 1447.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 115.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 78796167.0, "total_fwd_packets": 32.0, "total_len_fwd_pkts": 1311.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 12361.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 60596940.0, "total_fwd_packets": 13.0, "total_len_fwd_pkts": 1063.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 64036505.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 96.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 67043428.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 96.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 117222855.0, "total_fwd_packets": 15.0, "total_len_fwd_pkts": 1125.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 9598644.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 96.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8436297.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 98.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 49933, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 37.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 95.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 21, "flow_duration": 8583649.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 100.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 4.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 80, "flow_duration": 2131418.0, "total_fwd_packets": 4.0, "total_len_fwd_pkts": 1695.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 1103937.0, "total_fwd_packets": 8.0, "total_len_fwd_pkts": 2971.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 236.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 84.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 125543.0, "total_fwd_packets": 3.0, "total_len_fwd_pkts": 497.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 53, "flow_duration": 31839.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 55.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 46063478.0, "total_fwd_packets": 8.0, "total_len_fwd_pkts": 468.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 16800700.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 1394.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 177836.0, "total_fwd_packets": 25.0, "total_len_fwd_pkts": 2775.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
