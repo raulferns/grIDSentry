@@ -121,7 +121,7 @@ if IN_COLAB:
     sample_file = &#x27;data/sample_cicids/cicids2017_sample.csv&#x27;
     if not os.path.exists(&#x27;src&#x27;) or not os.path.exists(sample_file):
         print(&#x27;[COLAB] Synchronizing grIDSentry repository from GitHub...&#x27;)
-        get_ipython().system(&#x27;rm -rf temp_repo &amp;&amp; git clone https://github.com/raulferns/grIDSentry.git temp_repo &amp;&amp; cp -rn temp_repo/* . &amp;&amp; rm -rf temp_repo&#x27;)
+        get_ipython().system(&#x27;rm -rf temp_repo &amp;&amp; git clone https://github.com/raulferns/grIDSentry.git temp_repo &amp;&amp; cp -rf temp_repo/* . &amp;&amp; rm -rf temp_repo&#x27;)
         if not os.path.exists(&#x27;src&#x27;):
             print(&#x27;[COLAB] Connecting to Google Drive fallback...&#x27;)
             from google.colab import drive
