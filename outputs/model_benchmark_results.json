@@ -1,0 +1,71 @@
+[
+  {
+    "model_name": "Logistic Regression",
+    "accuracy": 89.9,
+    "precision": 89.9,
+    "recall": 89.9,
+    "f1_score": 89.5,
+    "roc_auc": 0.9693,
+    "pr_auc": 0.9315,
+    "inference_records_per_sec": 8543.0,
+    "confusion_matrix": [
+      {
+        "label": 0.0,
+        "0.0": 10439,
+        "1.0": 322
+      },
+      {
+        "label": 1.0,
+        "0.0": 1176,
+        "1.0": 2889
+      }
+    ],
+    "train_time_sec": 7.27
+  },
+  {
+    "model_name": "Random Forest",
+    "accuracy": 98.97,
+    "precision": 98.97,
+    "recall": 98.97,
+    "f1_score": 98.96,
+    "roc_auc": 0.9993,
+    "pr_auc": 0.9983,
+    "inference_records_per_sec": 179438.0,
+    "confusion_matrix": [
+      {
+        "label": 0.0,
+        "0.0": 10729,
+        "1.0": 32
+      },
+      {
+        "label": 1.0,
+        "0.0": 121,
+        "1.0": 3944
+      }
+    ],
+    "train_time_sec": 3.98
+  },
+  {
+    "model_name": "Gradient Boosted Trees",
+    "accuracy": 99.18,
+    "precision": 99.18,
+    "recall": 99.18,
+    "f1_score": 99.18,
+    "roc_auc": 0.9993,
+    "pr_auc": 0.9984,
+    "inference_records_per_sec": 236775.0,
+    "confusion_matrix": [
+      {
+        "label": 0.0,
+        "0.0": 10722,
+        "1.0": 39
+      },
+      {
+        "label": 1.0,
+        "0.0": 82,
+        "1.0": 3983
+      }
+    ],
+    "train_time_sec": 14.17
+  }
+]

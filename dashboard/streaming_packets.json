@@ -1,0 +1,1352 @@
+[
+  {
+    "dst_port": 88,
+    "flow_duration_us": 640,
+    "packets": 7,
+    "bytes": 440,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 900,
+    "packets": 9,
+    "bytes": 600,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1205,
+    "packets": 7,
+    "bytes": 2776,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 511,
+    "packets": 7,
+    "bytes": 452,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 773,
+    "packets": 9,
+    "bytes": 612,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 986,
+    "packets": 9,
+    "bytes": 3100,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 935,
+    "packets": 9,
+    "bytes": 3074,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 572849,
+    "packets": 15,
+    "bytes": 4076,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49193,
+    "flow_duration_us": 1,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1075,
+    "packets": 9,
+    "bytes": 3100,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 2687,
+    "packets": 9,
+    "bytes": 3074,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 135,
+    "flow_duration_us": 14263712,
+    "packets": 21,
+    "bytes": 1664,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49671,
+    "flow_duration_us": 14257993,
+    "packets": 11,
+    "bytes": 2378,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 135,
+    "flow_duration_us": 68,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49671,
+    "flow_duration_us": 58,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 26641766,
+    "packets": 4,
+    "bytes": 227,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49666,
+    "flow_duration_us": 34256029,
+    "packets": 39,
+    "bytes": 12094,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49666,
+    "flow_duration_us": 62,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 310531,
+    "packets": 15,
+    "bytes": 938,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49212,
+    "flow_duration_us": 4,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 123156,
+    "packets": 9,
+    "bytes": 496,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49220,
+    "flow_duration_us": 36020,
+    "packets": 2,
+    "bytes": 38,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 689974,
+    "packets": 12,
+    "bytes": 563,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 1581930,
+    "packets": 14,
+    "bytes": 1044,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 2346262,
+    "packets": 12,
+    "bytes": 563,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 2830799,
+    "packets": 72,
+    "bytes": 2238,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 2989643,
+    "packets": 7,
+    "bytes": 866,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 3182843,
+    "packets": 9,
+    "bytes": 1299,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 3266983,
+    "packets": 13,
+    "bytes": 562,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 4770553,
+    "packets": 6,
+    "bytes": 870,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 4953235,
+    "packets": 14,
+    "bytes": 2356,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 10637980,
+    "packets": 6,
+    "bytes": 293,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 4589384,
+    "packets": 8,
+    "bytes": 369,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49219,
+    "flow_duration_us": 915,
+    "packets": 3,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49214,
+    "flow_duration_us": 9749,
+    "packets": 5,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49217,
+    "flow_duration_us": 1484,
+    "packets": 3,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49222,
+    "flow_duration_us": 640,
+    "packets": 3,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49210,
+    "flow_duration_us": 2451,
+    "packets": 3,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49207,
+    "flow_duration_us": 347,
+    "packets": 3,
+    "bytes": 31,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49219,
+    "flow_duration_us": 237019,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 445,
+    "flow_duration_us": 90030854,
+    "packets": 10,
+    "bytes": 8,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 46033236,
+    "packets": 4,
+    "bytes": 233,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 4,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 60494983,
+    "packets": 11,
+    "bytes": 3276,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 82523355,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 109373101,
+    "packets": 5,
+    "bytes": 138,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 109543074,
+    "packets": 5,
+    "bytes": 181,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 109722768,
+    "packets": 6,
+    "bytes": 188,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 109861018,
+    "packets": 9,
+    "bytes": 441,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 493,
+    "packets": 11,
+    "bytes": 172,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 420,
+    "packets": 11,
+    "bytes": 172,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 53566,
+    "flow_duration_us": 1,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1170,
+    "packets": 9,
+    "bytes": 3226,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 51130,
+    "flow_duration_us": 10,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1155,
+    "packets": 9,
+    "bytes": 3226,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 0,
+    "flow_duration_us": 106007973,
+    "packets": 26,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 123,
+    "flow_duration_us": 64015367,
+    "packets": 4,
+    "bytes": 192,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1260,
+    "packets": 9,
+    "bytes": 3074,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 491,
+    "packets": 7,
+    "bytes": 2686,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1344,
+    "packets": 9,
+    "bytes": 3076,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 689,
+    "packets": 7,
+    "bytes": 2688,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 56922,
+    "flow_duration_us": 4,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 691,
+    "packets": 7,
+    "bytes": 466,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 914,
+    "packets": 9,
+    "bytes": 626,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1103,
+    "packets": 9,
+    "bytes": 3104,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 534,
+    "packets": 7,
+    "bytes": 2794,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 1034,
+    "flow_duration_us": 6,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 914,
+    "packets": 9,
+    "bytes": 3130,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 4574,
+    "packets": 13,
+    "bytes": 4130,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 2080,
+    "packets": 7,
+    "bytes": 472,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1901,
+    "packets": 9,
+    "bytes": 632,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1577,
+    "packets": 9,
+    "bytes": 3122,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 9742,
+    "packets": 9,
+    "bytes": 3078,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1396,
+    "packets": 7,
+    "bytes": 2856,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1840,
+    "packets": 8,
+    "bytes": 5038,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1706,
+    "packets": 7,
+    "bytes": 472,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 2104,
+    "packets": 9,
+    "bytes": 632,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1249,
+    "packets": 9,
+    "bytes": 3122,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 9267,
+    "packets": 9,
+    "bytes": 3096,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 3788,
+    "packets": 7,
+    "bytes": 2842,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 1447028,
+    "packets": 19,
+    "bytes": 5260,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 662,
+    "packets": 7,
+    "bytes": 466,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 885,
+    "packets": 9,
+    "bytes": 626,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 599,
+    "packets": 7,
+    "bytes": 466,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 815,
+    "packets": 9,
+    "bytes": 626,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1099,
+    "packets": 9,
+    "bytes": 3176,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1200,
+    "packets": 9,
+    "bytes": 3150,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 558,
+    "packets": 7,
+    "bytes": 2762,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 495,
+    "packets": 11,
+    "bytes": 172,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1139,
+    "packets": 10,
+    "bytes": 3150,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 55824,
+    "flow_duration_us": 0,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 26534,
+    "packets": 17,
+    "bytes": 3452,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1085,
+    "packets": 9,
+    "bytes": 3150,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1281,
+    "packets": 9,
+    "bytes": 3176,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 5167,
+    "packets": 13,
+    "bytes": 4130,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 53,
+    "flow_duration_us": 46870,
+    "packets": 1,
+    "bytes": 44,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 437,
+    "packets": 10,
+    "bytes": 165,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 1,
+    "packets": 2,
+    "bytes": 7,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1076,
+    "packets": 9,
+    "bytes": 3150,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 534,
+    "packets": 11,
+    "bytes": 172,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1195,
+    "packets": 10,
+    "bytes": 3150,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 14737,
+    "packets": 17,
+    "bytes": 3452,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 5194037,
+    "packets": 5,
+    "bytes": 72,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1115,
+    "packets": 9,
+    "bytes": 3150,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 562,
+    "packets": 7,
+    "bytes": 472,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 853,
+    "packets": 9,
+    "bytes": 632,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 911,
+    "packets": 9,
+    "bytes": 3078,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 21500,
+    "packets": 13,
+    "bytes": 5458,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 39097,
+    "packets": 21,
+    "bytes": 5100,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 550,
+    "packets": 10,
+    "bytes": 165,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 1,
+    "packets": 2,
+    "bytes": 7,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1169,
+    "packets": 9,
+    "bytes": 3150,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1110,
+    "packets": 9,
+    "bytes": 3128,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 445,
+    "flow_duration_us": 16523256,
+    "packets": 25,
+    "bytes": 2168,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49155,
+    "flow_duration_us": 5,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 445,
+    "flow_duration_us": 15637683,
+    "packets": 48,
+    "bytes": 10926,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49172,
+    "flow_duration_us": 12,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1153,
+    "packets": 9,
+    "bytes": 3176,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 549,
+    "packets": 7,
+    "bytes": 2762,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 816083,
+    "packets": 15,
+    "bytes": 4104,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 95829,
+    "packets": 3,
+    "bytes": 302,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 16,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 8599138,
+    "packets": 23,
+    "bytes": 5706,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 135,
+    "flow_duration_us": 26241793,
+    "packets": 11,
+    "bytes": 656,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49671,
+    "flow_duration_us": 26240384,
+    "packets": 21,
+    "bytes": 3678,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 135,
+    "flow_duration_us": 35,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49671,
+    "flow_duration_us": 50,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 1029,
+    "flow_duration_us": 0,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 676,
+    "packets": 7,
+    "bytes": 468,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 917,
+    "packets": 9,
+    "bytes": 628,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1035,
+    "packets": 9,
+    "bytes": 3064,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 33799,
+    "packets": 13,
+    "bytes": 5754,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 2924095,
+    "packets": 25,
+    "bytes": 5740,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 18633923,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49671,
+    "flow_duration_us": 22953788,
+    "packets": 21,
+    "bytes": 3014,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49671,
+    "flow_duration_us": 47,
+    "packets": 1,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 49422,
+    "flow_duration_us": 0,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 612,
+    "packets": 7,
+    "bytes": 466,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 934,
+    "packets": 9,
+    "bytes": 626,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 977,
+    "packets": 9,
+    "bytes": 3130,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 7744454,
+    "packets": 14,
+    "bytes": 5759,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 443,
+    "flow_duration_us": 4,
+    "packets": 2,
+    "bytes": 85,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 30931,
+    "packets": 3,
+    "bytes": 97,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 80,
+    "flow_duration_us": 320,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1138,
+    "packets": 9,
+    "bytes": 3082,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1152,
+    "packets": 7,
+    "bytes": 2796,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 909,
+    "packets": 8,
+    "bytes": 4930,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 389,
+    "flow_duration_us": 14649,
+    "packets": 13,
+    "bytes": 4104,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 1049,
+    "flow_duration_us": 8,
+    "packets": 2,
+    "bytes": 64,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  },
+  {
+    "dst_port": 88,
+    "flow_duration_us": 1176,
+    "packets": 9,
+    "bytes": 3104,
+    "is_attack": 0,
+    "attack_category": "Normal",
+    "attack_type": "BENIGN"
+  }
+]

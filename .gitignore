@@ -1,0 +1,22 @@
+# Big Data & Machine Learning Data Files (Exceeds GitHub 100MB limit)
+data/raw_cicids/
+data/parquet_cicids/
+data/streaming/checkpoints/
+*.parquet
+*.csv
+*.zip
+
+# Python Bytecode & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+venv/
+.venv/
+env/
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

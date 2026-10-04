@@ -1,0 +1,150 @@
+{"dst_port": 123, "flow_duration": 15042791.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 336.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 76016152.0, "total_fwd_packets": 8.0, "total_len_fwd_pkts": 384.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 66021966.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 336.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 64412706.0, "total_fwd_packets": 4.0, "total_len_fwd_pkts": 192.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 5353, "flow_duration": 63757117.0, "total_fwd_packets": 242.0, "total_len_fwd_pkts": 19426.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 67059625.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 336.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 335487.0, "total_fwd_packets": 3.0, "total_len_fwd_pkts": 228.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 67022566.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 336.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 77015818.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 432.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 707792.0, "total_fwd_packets": 3.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 79022373.0, "total_fwd_packets": 8.0, "total_len_fwd_pkts": 384.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 66093101.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 336.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 67027685.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 336.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 123, "flow_duration": 67071862.0, "total_fwd_packets": 7.0, "total_len_fwd_pkts": 336.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 443, "flow_duration": 2583611.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 0.0, "is_attack": 0, "attack_category": "Normal", "clean_label": "BENIGN"}
+{"dst_port": 80, "flow_duration": 5216127.0, "total_fwd_packets": 3.0, "total_len_fwd_pkts": 0.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 20.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 0.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 38.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 0.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 80.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 0.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 68.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 0.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 47.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 0.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 83.0, "total_fwd_packets": 1.0, "total_len_fwd_pkts": 0.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 265.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3302859.0, "total_fwd_packets": 6.0, "total_len_fwd_pkts": 36.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 215.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 289.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 6543160.0, "total_fwd_packets": 8.0, "total_len_fwd_pkts": 68.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 6627499.0, "total_fwd_packets": 8.0, "total_len_fwd_pkts": 75.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 6511621.0, "total_fwd_packets": 8.0, "total_len_fwd_pkts": 70.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 40.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 335.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 18.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 349.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9711548.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 104.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9715978.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9650536.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 102.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9669466.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9674538.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 101.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9679375.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 101.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 208.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 4.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 4.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9077120.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 102.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 313.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 42.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8923609.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 96.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8927463.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 112.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9380608.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 104.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 207.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 48.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 245.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 274.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 48.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8666911.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 102.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8675574.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 102.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9135070.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 102.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8802553.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 104.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8792673.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 98.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8792816.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 106.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 264.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 234.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9052209.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 230.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 164.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8666035.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 106.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8805760.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8808271.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 99.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 4.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 77.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 260.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 226.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8437401.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 103.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8591758.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 105.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8646847.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 99.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8646918.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 103.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 234.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9207463.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 107.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9209883.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 110.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 234.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9258254.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 111.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 233.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 313.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8761958.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8819589.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 107.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8821994.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 113.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 48.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 203.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 217.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 261.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8594296.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8587446.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8868400.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 113.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8857703.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 101.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 4.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9742971.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 108.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9742188.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 108.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 238.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8159968.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 107.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 329.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 248.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 42.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9647930.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9653518.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 117.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9645990.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 110.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 48.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 248.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 273.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 220.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8767733.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 117.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8764012.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8877327.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 98.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8897840.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 116.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8821832.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 107.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8837508.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 107.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 228.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 251.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 232.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9785070.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 109.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 314.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 294.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 4.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8211996.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 100.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8224921.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 114.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8234522.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 121.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 227.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 247.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 226.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 3.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 253.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8458452.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 106.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8458616.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 101.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8567099.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 114.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8458307.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 107.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9323165.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 105.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 237.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9714396.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 110.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 273.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 8803729.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 106.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 271.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 271.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 1.0, "total_fwd_packets": 2.0, "total_len_fwd_pkts": 14.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9513283.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 113.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9509705.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 100.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
+{"dst_port": 21, "flow_duration": 9507635.0, "total_fwd_packets": 9.0, "total_len_fwd_pkts": 105.0, "is_attack": 1, "attack_category": "Brute Force/Web", "clean_label": "FTP-Patator"}
