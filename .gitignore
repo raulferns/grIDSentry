@@ -2,6 +2,8 @@
 data/raw_cicids/
 data/parquet_cicids/
 data/streaming/checkpoints/
+data/streaming/input_stream/
+data/streaming/alerts/
 *.parquet
 *.zip
 

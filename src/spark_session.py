@@ -18,11 +18,21 @@ if os.path.exists(HADOOP_BIN):
     os.environ["HADOOP_HOME"] = HADOOP_DIR
     os.environ["PATH"] = HADOOP_BIN + os.pathsep + os.environ.get("PATH", "")
 
-# 4. Ensure JDK-17 is targeted explicitly for maximum stability with PySpark 3.5 / 4.x
-JDK17_PATH = r"C:\Program Files\Java\jdk-17"
-if os.path.exists(JDK17_PATH):
-    os.environ["JAVA_HOME"] = JDK17_PATH
-    os.environ["PATH"] = os.path.join(JDK17_PATH, "bin") + os.pathsep + os.environ.get("PATH", "")
+# 4. Ensure JDK-17 / Compatible JDK is targeted explicitly for PySpark stability
+jdk_candidates = [
+    r"C:\Program Files\Java\jdk-17",
+]
+for base in [r"C:\Program Files\Eclipse Adoptium", r"C:\Program Files\Java", r"C:\Program Files\Microsoft"]:
+    if os.path.exists(base):
+        for entry in os.listdir(base):
+            if ("17" in entry or "21" in entry) and os.path.isdir(os.path.join(base, entry)):
+                jdk_candidates.append(os.path.join(base, entry))
+
+for candidate in jdk_candidates:
+    if os.path.exists(os.path.join(candidate, "bin", "java.exe")):
+        os.environ["JAVA_HOME"] = candidate
+        os.environ["PATH"] = os.path.join(candidate, "bin") + os.pathsep + os.environ.get("PATH", "")
+        break
 
 # 5. JVM Reflection flags required by Java 17 for PySpark internal memory managers
 os.environ["PYSPARK_SUBMIT_ARGS"] = (

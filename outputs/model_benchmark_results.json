@@ -1,71 +1,71 @@
 [
   {
     "model_name": "Logistic Regression",
-    "accuracy": 89.9,
-    "precision": 89.9,
-    "recall": 89.9,
-    "f1_score": 89.5,
-    "roc_auc": 0.9693,
-    "pr_auc": 0.9315,
-    "inference_records_per_sec": 8543.0,
+    "accuracy": 84.85,
+    "precision": 85.19,
+    "recall": 84.85,
+    "f1_score": 84.71,
+    "roc_auc": 0.9468,
+    "pr_auc": 0.9522,
+    "inference_records_per_sec": 4934.0,
     "confusion_matrix": [
       {
         "label": 0.0,
-        "0.0": 10439,
-        "1.0": 322
+        "0.0": 2262,
+        "1.0": 677
       },
       {
         "label": 1.0,
-        "0.0": 1176,
-        "1.0": 2889
+        "0.0": 299,
+        "1.0": 3203
       }
     ],
-    "train_time_sec": 7.27
+    "train_time_sec": 7.96
   },
   {
     "model_name": "Random Forest",
-    "accuracy": 98.97,
-    "precision": 98.97,
-    "recall": 98.97,
-    "f1_score": 98.96,
-    "roc_auc": 0.9993,
-    "pr_auc": 0.9983,
-    "inference_records_per_sec": 179438.0,
+    "accuracy": 99.27,
+    "precision": 99.27,
+    "recall": 99.27,
+    "f1_score": 99.27,
+    "roc_auc": 0.999,
+    "pr_auc": 0.9993,
+    "inference_records_per_sec": 66672.0,
     "confusion_matrix": [
       {
         "label": 0.0,
-        "0.0": 10729,
-        "1.0": 32
+        "0.0": 2915,
+        "1.0": 24
       },
       {
         "label": 1.0,
-        "0.0": 121,
-        "1.0": 3944
+        "0.0": 23,
+        "1.0": 3479
       }
     ],
-    "train_time_sec": 3.98
+    "train_time_sec": 7.02
   },
   {
     "model_name": "Gradient Boosted Trees",
-    "accuracy": 99.18,
-    "precision": 99.18,
-    "recall": 99.18,
-    "f1_score": 99.18,
-    "roc_auc": 0.9993,
-    "pr_auc": 0.9984,
-    "inference_records_per_sec": 236775.0,
+    "accuracy": 99.32,
+    "precision": 99.32,
+    "recall": 99.32,
+    "f1_score": 99.32,
+    "roc_auc": 0.9994,
+    "pr_auc": 0.9995,
+    "inference_records_per_sec": 78081.0,
     "confusion_matrix": [
       {
         "label": 0.0,
-        "0.0": 10722,
-        "1.0": 39
+        "0.0": 2918,
+        "1.0": 21
       },
       {
         "label": 1.0,
-        "0.0": 82,
-        "1.0": 3983
+        "0.0": 23,
+        "1.0": 3479
       }
     ],
-    "train_time_sec": 14.17
+    "train_time_sec": 15.02
   }
 ]

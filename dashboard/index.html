@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>grIDSentry | Distributed Threat Operations & Anomaly Detection Center</title>
-  <meta name="description"
-    content="Distributed Big Data Network Intrusion and Anomaly Detection Platform powered by Apache Spark, PySpark, Spark SQL, Spark MLlib, and Columnar Parquet on real-world multi-gigabyte traffic.">
+  <title>grIDSentry</title>
 
-  <!-- Modern Typography (Plus Jakarta Sans + Fira Code) -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <!-- Chart.js Engine -->
@@ -21,143 +19,100 @@
 </head>
 
 <body class="enterprise-app">
-  <!-- Layout Shell -->
   <div class="app-layout">
 
-    <!-- Sidebar Navigation -->
+    <!-- Minimal Sidebar -->
     <aside class="app-sidebar">
       <div class="sidebar-header">
         <div class="brand-mark">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 2 7 12 12 22 7 12 2" />
             <polyline points="2 17 12 22 22 17" />
             <polyline points="2 12 12 17 22 12" />
           </svg>
         </div>
-        <div class="brand-text">
-          <span class="brand-title">grIDSentry</span>
-          <span class="brand-tag">SPARK SOC ENGINE</span>
-        </div>
-      </div>
-
-      <!-- Cluster Context HUD -->
-      <div class="sidebar-cluster-info">
-        <div class="cluster-label">CLUSTER CONTEXT</div>
-        <div class="cluster-val">
-          <span class="cluster-dot"></span>
-          <span id="spark-ver-badge">Apache Spark 4.2.0</span>
-        </div>
-        <div class="cluster-sub">Master: local[*] • 8 Partitions</div>
-        <div class="cluster-dataset-tag" id="sidebar-dataset-tag">1.12 GB CICIDS2017</div>
+        <span class="brand-title">grIDSentry</span>
       </div>
 
       <!-- Navigation Links -->
       <nav class="sidebar-nav">
-        <div class="nav-section-title">REAL-TIME SURVEILLANCE</div>
         <button class="nav-item active" data-tab="overview" id="nav-btn-overview">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="7" height="7" />
             <rect x="14" y="3" width="7" height="7" />
             <rect x="14" y="14" width="7" height="7" />
             <rect x="3" y="14" width="7" height="7" />
           </svg>
-          <span>Operations Center</span>
+          <span>Overview</span>
         </button>
         <button class="nav-item" data-tab="streaming" id="nav-btn-streaming">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
           </svg>
-          <span>Live Packet Stream</span>
-          <span class="nav-badge live-pulse" id="live-stream-badge">LIVE</span>
+          <span>Live Stream</span>
+          <span class="nav-badge" id="live-stream-badge">LIVE</span>
         </button>
         <button class="nav-item" data-tab="threats" id="nav-btn-threats">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           </svg>
-          <span>Threat Telemetry</span>
+          <span>Telemetry</span>
         </button>
-
-        <div class="nav-section-title">BIG DATA & ML ENGINE</div>
         <button class="nav-item" data-tab="storage" id="nav-btn-storage">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <ellipse cx="12" cy="5" rx="9" ry="3" />
             <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
           </svg>
-          <span>Parquet Lakehouse</span>
+          <span>Storage</span>
         </button>
         <button class="nav-item" data-tab="models" id="nav-btn-models">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="3" />
             <path
               d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
           </svg>
-          <span>Spark MLlib Models</span>
+          <span>ML Models</span>
         </button>
         <button class="nav-item" data-tab="queries" id="nav-btn-queries">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="4 17 10 11 4 5" />
             <line x1="12" y1="19" x2="20" y2="19" />
           </svg>
-          <span>SQL Analytics Shell</span>
+          <span>SQL Shell</span>
         </button>
-
-        <div class="nav-section-title">REPORTS & ARTIFACTS</div>
-        <a href="notebook.html" target="_blank" class="nav-item nav-link">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <a href="notebook.html" target="_blank" class="nav-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
           </svg>
-          <span>Project Notebook (HTML)</span>
+          <span>Notebook</span>
         </a>
       </nav>
 
-      <!-- Sidebar Status Footer -->
+      <!-- Minimal Sidebar Status -->
       <div class="sidebar-footer">
-        <div class="user-meta">
-          <div class="user-avatar">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-          </div>
-          <div class="user-details">
-            <span class="user-name">Local PySpark Engine</span>
-            <span class="user-role" id="engine-status-text">Active Pipeline Session</span>
-          </div>
-        </div>
+        <span id="spark-ver-badge">Spark 4.2</span>
+        <span class="cluster-dot"></span>
+        <span style="display:none;" id="sidebar-dataset-tag"></span>
+        <span style="display:none;" id="engine-status-text"></span>
       </div>
     </aside>
 
     <!-- Main Workspace -->
     <div class="app-workspace">
 
-      <!-- Top Control Bar -->
+      <!-- Minimal Top Bar -->
       <header class="workspace-topbar">
-        <div class="topbar-left">
-          <div class="breadcrumb">
-            <span class="bc-root">grIDSentry SOC</span>
-            <span class="bc-sep">/</span>
-            <span class="bc-current" id="breadcrumb-title">Operations Center</span>
-          </div>
+        <div class="breadcrumb">
+          <span class="bc-current" id="breadcrumb-title">Overview</span>
         </div>
 
         <div class="topbar-right">
-          <div class="topbar-stat">
-            <span class="ts-label">DATASET:</span>
-            <span class="ts-val" id="dataset-size-badge">1.12 GB Real-World PCAP</span>
-          </div>
-          <div class="topbar-stat">
-            <span class="ts-label">STORAGE:</span>
-            <span class="ts-val text-safe">PARQUET (Snappy)</span>
-          </div>
-          <div class="topbar-stat">
-            <span class="ts-label">ENGINE:</span>
-            <span class="ts-val status-green">NOMINAL (8 partitions)</span>
-          </div>
+          <span style="display:none;" id="dataset-size-badge"></span>
           <button class="topbar-btn" id="btn-export-data">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
@@ -167,221 +122,105 @@
         </div>
       </header>
 
-      <!-- Scrollable Workspace Content -->
+      <!-- Scrollable Workspace Body -->
       <main class="workspace-body">
 
         <!-- ============================================== -->
-        <!-- TAB 1: OPERATIONS CENTER (OVERVIEW)           -->
+        <!-- TAB 1: OVERVIEW                                -->
         <!-- ============================================== -->
         <section id="tab-overview" class="view-panel active">
 
-          <!-- Live Cluster Heartbeat Ribbon -->
-          <div class="live-cluster-ribbon">
-            <div class="lcr-item"><span class="pill-dot"></span> <b>SPARK CLUSTER:</b> <span
-                class="text-safe font-mono">ACTIVE (local[*], 8 cores)</span></div>
-            <div class="lcr-item"><b>MICRO-BATCH:</b> <span id="live-batch-id" class="font-mono">#1,482</span></div>
-            <div class="lcr-item"><b>LIVE INGESTION:</b> <span id="live-throughput-rate"
-                class="text-safe font-mono font-bold">1,420 flows/sec</span></div>
-            <div class="lcr-item"><b>JVM HEAP:</b> <span id="live-jvm-heap" class="font-mono">1.84 GB / 4.0 GB</span>
+          <!-- 4 Clean KPI Cards -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <span class="kpi-title">Total Flows</span>
+              <div class="kpi-value-row">
+                <span class="kpi-value" id="val-total-flows">3,119,345</span>
+              </div>
+              <div class="kpi-desc" id="desc-total-flows">8 Partitions</div>
             </div>
-            <div class="lcr-item"><b>INFERENCE LATENCY:</b> <span id="live-batch-latency"
-                class="font-mono text-info">0.84 ms</span></div>
-            <div class="lcr-actions">
+
+            <div class="kpi-card">
+              <span class="kpi-title">Threat Ratio</span>
+              <div class="kpi-value-row">
+                <span class="kpi-value text-threat" id="val-threat-ratio">27.13%</span>
+              </div>
+              <div class="kpi-desc" id="desc-threat-ratio">846,248 Flagged</div>
+            </div>
+
+            <div class="kpi-card">
+              <span class="kpi-title">Storage Saved</span>
+              <div class="kpi-value-row">
+                <span class="kpi-value text-safe" id="val-compression-ratio">67.01%</span>
+              </div>
+              <div class="kpi-desc" id="desc-compression">Parquet Snappy</div>
+            </div>
+
+            <div class="kpi-card">
+              <span class="kpi-title">Model Accuracy</span>
+              <div class="kpi-value-row">
+                <span class="kpi-value text-info" id="val-peak-accuracy">99.18%</span>
+              </div>
+              <div class="kpi-desc" id="desc-accuracy">GBT Classifier</div>
+            </div>
+          </div>
+
+          <!-- Live Streaming Throughput -->
+          <div class="widget-card">
+            <div class="widget-head">
+              <h3 class="widget-title">Live Throughput</h3>
+              <div class="meta-group">
+                <span class="badge-cell safe">Normal: <span id="live-normal-rate" class="font-mono">1,120</span>/s</span>
+                <span class="badge-cell threat">Threats: <span id="live-threat-rate" class="font-mono">300</span>/s</span>
+              </div>
+            </div>
+
+            <div class="stream-meta-bar">
+              <div class="meta-group">
+                <div class="meta-item"><b>Batch:</b> <span id="live-batch-id">#1,482</span></div>
+                <div class="meta-item"><b>Rate:</b> <span id="live-throughput-rate" class="text-safe">1,420 flows/s</span></div>
+                <div class="meta-item"><b>Heap:</b> <span id="live-jvm-heap">1.84 GB</span></div>
+                <div class="meta-item"><b>Latency:</b> <span id="live-batch-latency" class="text-info">0.84 ms</span></div>
+              </div>
               <button class="btn-action btn-danger btn-sm" id="btn-quick-inject-attack">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                 </svg>
-                Inject Attack Burst
+                Inject Burst
               </button>
             </div>
+
+            <div style="height: 190px; position: relative;">
+              <canvas id="chart-live-throughput"></canvas>
+            </div>
           </div>
 
-          <!-- Tactical Command Telemetry Ribbon (Asymmetric Bento HUD - Anti AI-slop) -->
-          <div class="command-hud-ribbon">
-
-            <div class="hud-item hud-item-primary">
-              <div class="hud-item-header">
-                <span class="hud-badge">TOTAL INGESTION</span>
-                <span class="hud-live-tag font-mono text-safe" id="hud-live-rate">▲ LIVE INGESTION</span>
-              </div>
-              <div class="hud-val-row">
-                <span class="hud-val font-mono" id="val-total-flows">3,119,345</span>
-                <span class="hud-unit">Flows</span>
-              </div>
-              <div class="hud-caption" id="desc-total-flows">8 real-world CSV partitions ingested</div>
-            </div>
-
-            <div class="hud-item hud-item-threat">
-              <div class="hud-item-header">
-                <span class="hud-badge badge-threat">ANOMALY QUOTIENT</span>
-                <span class="hud-sub-label">Spark SQL Aggregation</span>
-              </div>
-              <div class="hud-val-row">
-                <span class="hud-val font-mono text-threat" id="val-threat-ratio">27.13%</span>
-                <span class="hud-unit text-threat">Threats</span>
-              </div>
-              <div class="hud-caption" id="desc-threat-ratio">846,248 malicious connections detected</div>
-            </div>
-
-            <div class="hud-item hud-item-safe">
-              <div class="hud-item-header">
-                <span class="hud-badge badge-safe">LAKEHOUSE EFFICIENCY</span>
-                <span class="hud-sub-label">Snappy Parquet</span>
-              </div>
-              <div class="hud-val-row">
-                <span class="hud-val font-mono text-safe" id="val-compression-ratio">67.01%</span>
-                <span class="hud-unit text-safe">Saved</span>
-              </div>
-              <div class="hud-caption" id="desc-compression">1,147 MB CSV reduced to 378 MB Parquet</div>
-            </div>
-
-            <div class="hud-item hud-item-info">
-              <div class="hud-item-header">
-                <span class="hud-badge badge-info">PEAK ML ACCURACY (GBT)</span>
-                <span class="hud-sub-label">Unseen Test Partition</span>
-              </div>
-              <div class="hud-val-row">
-                <span class="hud-val font-mono text-info" id="val-peak-accuracy">99.18%</span>
-                <span class="hud-unit text-info">F1 Score</span>
-              </div>
-              <div class="hud-caption" id="desc-accuracy">Evaluated on 14,826 holdout flows</div>
-            </div>
-
-          </div>
-
-          <!-- Asymmetric Command Grid -->
-          <div class="dashboard-grid">
-
-            <!-- Real-time Spark Structured Streaming Throughput Timeline (Live Scrolling Chart) -->
-            <div class="widget-card col-span-12">
+          <!-- 2-Column Grid (Donut & Attacks Bar) -->
+          <div class="dashboard-grid-2">
+            <div class="widget-card" style="margin-bottom:0;">
               <div class="widget-head">
-                <div>
-                  <h3 class="widget-title">Live Spark Structured Streaming Throughput & Threat Activity</h3>
-                  <p class="widget-subtitle">Real-time sliding window telemetry: Ingested Flow Rate vs Anomaly
-                    Incursions from 1.12 GB Dataset</p>
-                </div>
-                <div class="live-status-tags">
-                  <span class="badge-cell safe"><span class="pill-dot"></span> BENIGN: <span id="live-normal-rate"
-                      class="font-mono">1,120</span> pkts/s</span>
-                  <span class="badge-cell threat"><span class="pill-dot" style="background:#ef4444;"></span> ATTACK
-                    SPIKE: <span id="live-threat-rate" class="font-mono">300</span> pkts/s</span>
-                </div>
+                <h3 class="widget-title">Threat Distribution</h3>
               </div>
-              <div class="chart-wrapper-line" style="height: 180px; position: relative;">
-                <canvas id="chart-live-throughput"></canvas>
-              </div>
-            </div>
-
-            <!-- Attack Family Breakdown (Donut + High Density Legend) -->
-            <div class="widget-card col-span-5">
-              <div class="widget-head">
-                <div>
-                  <h3 class="widget-title">Macro Threat Family Distribution</h3>
-                  <p class="widget-subtitle">Categorized real-world flow distribution in 1.12 GB traffic</p>
-                </div>
-                <span class="widget-tag">Spark SQL View</span>
-              </div>
-              <div class="donut-layout">
-                <div class="chart-wrapper-donut">
+              <div class="donut-container">
+                <div class="chart-donut-wrapper">
                   <canvas id="chart-attack-donut"></canvas>
                 </div>
-                <div class="donut-breakdown" id="legend-attack-stats">
-                  <!-- Dynamically populated -->
+                <div class="donut-legend-list" id="legend-attack-stats">
+                  <!-- Populated dynamically -->
                 </div>
               </div>
             </div>
 
-            <!-- Top Attack Signatures Horizontal Bar Chart -->
-            <div class="widget-card col-span-7">
+            <div class="widget-card" style="margin-bottom:0;">
               <div class="widget-head">
-                <div>
-                  <h3 class="widget-title">Top Detected Attack Signatures</h3>
-                  <p class="widget-subtitle">Ranked by connection frequency in the CICIDS2017 dataset</p>
-                </div>
-                <span class="widget-tag">Flow Frequency</span>
+                <h3 class="widget-title">Top Attack Signatures</h3>
               </div>
-              <div class="chart-wrapper-bar">
+              <div class="chart-bar-wrapper">
                 <canvas id="chart-top-attacks"></canvas>
               </div>
             </div>
-
-            <!-- Distributed Big Data Architecture Pipeline (Excalidraw/Topology Flow) -->
-            <div class="widget-card col-span-12">
-              <div class="widget-head">
-                <div>
-                  <h3 class="widget-title">Distributed Big Data Pipeline Topology</h3>
-                  <p class="widget-subtitle">End-to-end data flow: 1.12 GB Raw PCAP ➔ Columnar Parquet ➔ MLlib ➔
-                    Real-Time Streaming</p>
-                </div>
-                <span class="widget-tag status-pill-active">PIPELINE ACTIVE</span>
-              </div>
-              <div class="topology-grid">
-                <div class="topo-node">
-                  <div class="topo-step">STAGE 01 • INGESTION</div>
-                  <div class="topo-name">1.12 GB Raw PCAPs</div>
-                  <div class="topo-desc">8 real-world CSV partitions (3.11M flows) normalized with safe try_cast</div>
-                  <div class="topo-metric font-mono">3,119,345 records</div>
-                </div>
-                <div class="topo-connector">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </div>
-                <div class="topo-node active-node">
-                  <div class="topo-step">STAGE 02 • LAKEHOUSE</div>
-                  <div class="topo-name">Columnar Parquet</div>
-                  <div class="topo-desc">Snappy compressed binary store with predicate pushdown and column pruning</div>
-                  <div class="topo-metric font-mono text-safe">378.5 MB (67.0% saved)</div>
-                </div>
-                <div class="topo-connector">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </div>
-                <div class="topo-node">
-                  <div class="topo-step">STAGE 03 • ANALYTICS</div>
-                  <div class="topo-name">Spark SQL Engine</div>
-                  <div class="topo-desc">Window ranking (ROW_NUMBER), port targeting, control flag frequency</div>
-                  <div class="topo-metric font-mono text-info">In-Memory Views</div>
-                </div>
-                <div class="topo-connector">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </div>
-                <div class="topo-node">
-                  <div class="topo-step">STAGE 04 • FEATURE ML</div>
-                  <div class="topo-name">Vector Assembler</div>
-                  <div class="topo-desc">43 network flow dimensions scaled with StandardScaler pipeline</div>
-                  <div class="topo-metric font-mono">43 feature vector</div>
-                </div>
-                <div class="topo-connector">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </div>
-                <div class="topo-node">
-                  <div class="topo-step">STAGE 05 • DUAL MLlib</div>
-                  <div class="topo-name">GBT + K-Means</div>
-                  <div class="topo-desc">Supervised GBT classifier (99.18% F1) + Unsupervised K-Means zero-day outliers
-                  </div>
-                  <div class="topo-metric font-mono text-safe">236k flows/sec</div>
-                </div>
-                <div class="topo-connector">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </div>
-                <div class="topo-node">
-                  <div class="topo-step">STAGE 06 • STREAMING</div>
-                  <div class="topo-name">Structured Streaming</div>
-                  <div class="topo-desc">Sliding window micro-batches with real-time threat verdicts</div>
-                  <div class="topo-metric font-mono text-warning">~0.9 ms / flow</div>
-                </div>
-              </div>
-            </div>
-
           </div>
+
         </section>
 
         <!-- ============================================== -->
@@ -390,56 +229,48 @@
         <section id="tab-streaming" class="view-panel">
           <div class="widget-card">
             <div class="widget-head">
-              <div>
-                <h3 class="widget-title">Spark Structured Streaming Micro-Batch Monitor</h3>
-                <p class="widget-subtitle">Real-time packet inspection from the 1.12 GB dataset with live ML
-                  classification</p>
-              </div>
-              <div class="stream-toolbar">
-                <button class="btn-action btn-secondary" id="btn-toggle-stream">Pause Stream</button>
+              <h3 class="widget-title">Packet Stream</h3>
+              <div class="meta-group">
+                <button class="btn-action btn-secondary" id="btn-toggle-stream">Pause</button>
                 <button class="btn-action btn-danger" id="btn-inject-attack">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                   </svg>
-                  Simulate Attack Burst
+                  Inject Burst
                 </button>
               </div>
             </div>
 
-            <!-- Stream Health Status Bar -->
-            <div class="stream-stats-bar">
-              <div class="stat-pill"><span class="pill-dot"></span> <b>STATE:</b> <span id="stream-status"
-                  class="text-safe">ACTIVE (800ms micro-batch)</span></div>
-              <div class="stat-pill"><b>FLOWS INGESTED:</b> <span id="stream-counter" class="font-mono">0</span></div>
-              <div class="stat-pill"><b>THREATS FLAGGED:</b> <span id="stream-alert-counter"
-                  class="text-threat font-mono">0</span></div>
-              <div class="stat-pill"><b>SPARK INFERENCE SPEED:</b> <span class="font-mono">~0.9 ms / flow</span></div>
+            <div class="stream-meta-bar">
+              <div class="meta-group">
+                <div class="meta-item"><span class="cluster-dot"></span> <span id="stream-status" class="text-safe">Active</span></div>
+                <div class="meta-item"><b>Flows:</b> <span id="stream-counter">0</span></div>
+                <div class="meta-item"><b>Threats:</b> <span id="stream-alert-counter" class="text-threat">0</span></div>
+              </div>
             </div>
 
-            <!-- Table with Filter and Inspector -->
             <div class="table-card">
               <div class="table-filter-bar">
                 <div class="search-box">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="11" cy="11" r="8" />
                     <line x1="21" y1="21" x2="16.65" y2="16.65" />
                   </svg>
-                  <input type="text" id="stream-search-input"
-                    placeholder="Filter by port, classification, verdict, or protocol...">
+                  <input type="text" id="stream-search-input" placeholder="Search flows...">
                 </div>
-                <span class="filter-count" id="filter-status-hint">Click any flow to open Deep Packet Inspector</span>
+                <span class="filter-count" id="filter-status-hint"></span>
               </div>
               <div class="table-responsive">
                 <table class="ops-table stream-table">
                   <thead>
                     <tr>
                       <th>TIMESTAMP</th>
-                      <th>DESTINATION PORT</th>
+                      <th>PORT</th>
                       <th>DURATION</th>
-                      <th>PACKET COUNT</th>
-                      <th>BYTE VOLUME</th>
+                      <th>PACKETS</th>
+                      <th>BYTES</th>
                       <th>VERDICT</th>
-                      <th>SIGNATURE CLASSIFICATION</th>
+                      <th>SIGNATURE</th>
                     </tr>
                   </thead>
                   <tbody id="stream-tbody">
@@ -455,17 +286,12 @@
         <!-- TAB 3: THREAT TELEMETRY                       -->
         <!-- ============================================== -->
         <section id="tab-threats" class="view-panel">
-          <div class="dashboard-grid">
+          <div class="dashboard-grid-2">
 
             <!-- Window Ranking Table -->
-            <div class="widget-card col-span-6">
+            <div class="widget-card">
               <div class="widget-head">
-                <div>
-                  <h3 class="widget-title">Targeted Ports by Threat Family</h3>
-                  <p class="widget-subtitle">Spark SQL Window Function:
-                    <code>ROW_NUMBER() OVER (PARTITION BY category ORDER BY traffic DESC)</code></p>
-                </div>
-                <span class="widget-tag">Window Ranking</span>
+                <h3 class="widget-title">Targeted Ports</h3>
               </div>
               <div class="table-responsive">
                 <table class="ops-table">
@@ -473,8 +299,8 @@
                     <tr>
                       <th>ATTACK FAMILY</th>
                       <th>RANK</th>
-                      <th>TARGET PORT</th>
-                      <th>TRAFFIC VOLUME</th>
+                      <th>PORT</th>
+                      <th>FLOWS</th>
                     </tr>
                   </thead>
                   <tbody id="tbody-window-ranking">
@@ -485,24 +311,20 @@
             </div>
 
             <!-- Control Flags Table -->
-            <div class="widget-card col-span-6">
+            <div class="widget-card">
               <div class="widget-head">
-                <div>
-                  <h3 class="widget-title">TCP Control Flag Threat Signatures</h3>
-                  <p class="widget-subtitle">Mean flag frequency across attack categories in 1.12 GB dataset</p>
-                </div>
-                <span class="widget-tag">Flag Telemetry</span>
+                <h3 class="widget-title">TCP Flags</h3>
               </div>
               <div class="table-responsive">
                 <table class="ops-table">
                   <thead>
                     <tr>
-                      <th>ATTACK FAMILY</th>
-                      <th>SYN RATE</th>
-                      <th>RST RATE</th>
-                      <th>PSH RATE</th>
-                      <th>ACK RATE</th>
-                      <th>FIN RATE</th>
+                      <th>FAMILY</th>
+                      <th>SYN</th>
+                      <th>RST</th>
+                      <th>PSH</th>
+                      <th>ACK</th>
+                      <th>FIN</th>
                     </tr>
                   </thead>
                   <tbody id="tbody-flags">
@@ -512,118 +334,90 @@
               </div>
             </div>
 
-            <!-- Flow Telemetry Table -->
-            <div class="widget-card col-span-12">
-              <div class="widget-head">
-                <div>
-                  <h3 class="widget-title">Network Flow Rate & Packet Dimension Telemetry</h3>
-                  <p class="widget-subtitle">Aggregated bandwidth, packet frequency, and average segment length across
-                    3.11M records</p>
-                </div>
-                <span class="widget-tag">Distributed Throughput</span>
-              </div>
-              <div class="table-responsive">
-                <table class="ops-table">
-                  <thead>
-                    <tr>
-                      <th>ATTACK CATEGORY</th>
-                      <th>AVG FLOW BYTES/SEC</th>
-                      <th>AVG FLOW PACKETS/SEC</th>
-                      <th>AVERAGE PACKET SIZE</th>
-                      <th>AVG FWD PACKETS</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tbody-telemetry">
-                    <!-- Populated dynamically -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
+          </div>
 
+          <!-- Flow Telemetry Table -->
+          <div class="widget-card">
+            <div class="widget-head">
+              <h3 class="widget-title">Flow Dimensions</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="ops-table">
+                <thead>
+                  <tr>
+                    <th>CATEGORY</th>
+                    <th>BYTES/S</th>
+                    <th>PACKETS/S</th>
+                    <th>AVG PKT SIZE</th>
+                    <th>FWD PACKETS</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-telemetry">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
         <!-- ============================================== -->
-        <!-- TAB 4: STORAGE BENCHMARK (PARQUET LAKEHOUSE)  -->
+        <!-- TAB 4: STORAGE BENCHMARK                      -->
         <!-- ============================================== -->
         <section id="tab-storage" class="view-panel">
           <div class="widget-card">
             <div class="widget-head">
-              <div>
-                <h3 class="widget-title">Storage Economics & Predicate Pushdown: Parquet vs CSV</h3>
-                <p class="widget-subtitle">Benchmarked across 1,147.37 MB of real-world PCAP flow logs</p>
-              </div>
-              <span class="widget-tag">Storage Efficiency</span>
+              <h3 class="widget-title">Parquet vs CSV</h3>
             </div>
 
             <div class="storage-comparison-grid">
               <div class="storage-tile">
                 <div class="tile-header">
-                  <span class="tile-badge">LEGACY FORMAT</span>
-                  <h4>Raw Real-World CSV Logs</h4>
+                  <h4>Raw CSV</h4>
                 </div>
                 <div class="tile-metric-group">
                   <div class="tile-value" id="storage-raw-size">1,147.37 MB</div>
-                  <div class="tile-label">Uncompressed Text Footprint</div>
+                  <div class="tile-label">Uncompressed</div>
                 </div>
-                <ul class="tile-bullets">
-                  <li>Row-oriented plain text requiring full file scans for every query</li>
-                  <li>Zero predicate pushdown or column pruning capabilities</li>
-                  <li>Overhead from repeated string-to-numeric casting on every worker</li>
-                  <li>Inefficient distributed partition I/O on large clusters</li>
-                </ul>
               </div>
 
               <div class="storage-tile tile-featured">
                 <div class="tile-header">
-                  <span class="tile-badge badge-safe">OPTIMIZED LAKEHOUSE</span>
-                  <h4>Columnar Apache Parquet</h4>
+                  <h4>Columnar Parquet</h4>
                 </div>
                 <div class="tile-metric-group">
                   <div class="tile-value text-safe" id="storage-pq-size">378.52 MB</div>
-                  <div class="tile-label" id="storage-savings-label">67.01% Footprint Reduction</div>
+                  <div class="tile-label text-safe" id="storage-savings-label">67.01% Saved</div>
                 </div>
-                <ul class="tile-bullets">
-                  <li>Snappy-compressed columnar encoding achieving <b>67% space reduction</b></li>
-                  <li>Column pruning reads only the 43 relevant feature dimensions</li>
-                  <li>Predicate pushdown filters attack classes before deserialization</li>
-                  <li>Embedded min/max statistics avoid full partition reads</li>
-                </ul>
               </div>
             </div>
 
-            <div class="chart-wrapper-bar mt-4">
+            <div class="chart-bar-wrapper mt-4">
               <canvas id="chart-storage-comparison"></canvas>
             </div>
           </div>
         </section>
 
         <!-- ============================================== -->
-        <!-- TAB 5: SPARK MLLIB BENCHMARKS                  -->
+        <!-- TAB 5: ML MODELS                              -->
         <!-- ============================================== -->
         <section id="tab-models" class="view-panel">
           <div class="widget-card">
             <div class="widget-head">
-              <div>
-                <h3 class="widget-title">Distributed MLlib Supervised Model Benchmark</h3>
-                <p class="widget-subtitle">Trained and evaluated on unseen real-world test partitions (14,826 test
-                  flows)</p>
-              </div>
-              <span class="widget-tag">Spark MLlib</span>
+              <h3 class="widget-title">Supervised Models</h3>
             </div>
 
             <div class="table-responsive">
               <table class="ops-table">
                 <thead>
                   <tr>
-                    <th>CLASSIFICATION MODEL</th>
+                    <th>MODEL</th>
                     <th>ACCURACY</th>
-                    <th>WEIGHTED PRECISION</th>
-                    <th>WEIGHTED RECALL</th>
+                    <th>PRECISION</th>
+                    <th>RECALL</th>
                     <th>F1-SCORE</th>
                     <th>ROC-AUC</th>
-                    <th>TRAIN LATENCY</th>
-                    <th>INFERENCE THROUGHPUT</th>
+                    <th>TRAIN TIME</th>
+                    <th>SPEED</th>
                   </tr>
                 </thead>
                 <tbody id="tbody-models">
@@ -634,35 +428,32 @@
 
             <div class="grid-2-cols mt-4">
               <div>
-                <h4 class="subhead">Model Metrics Comparison (Accuracy vs F1)</h4>
-                <div class="chart-wrapper-bar">
+                <h4 class="subhead">Accuracy vs F1</h4>
+                <div class="chart-bar-wrapper">
                   <canvas id="chart-model-metrics"></canvas>
                 </div>
               </div>
 
               <div class="anomaly-summary-box">
                 <div class="widget-head" style="margin-bottom:0.75rem;">
-                  <h4 class="subhead">Unsupervised K-Means Anomaly Detection</h4>
-                  <span class="widget-tag">Zero-Day Defense</span>
+                  <h4 class="subhead">K-Means Outlier Detection</h4>
                 </div>
-                <p class="desc-p">Detects novel, previously unseen zero-day attacks without requiring training labels by
-                  measuring Euclidean centroid distance on the 43-dimensional scaled feature vector.</p>
                 <div class="kmeans-stat-grid">
                   <div class="k-stat">
-                    <span class="k-label">CLUSTER COUNT (k):</span>
-                    <span class="k-val">6 Clusters</span>
+                    <span class="k-label">Clusters (k)</span>
+                    <span class="k-val">6</span>
                   </div>
                   <div class="k-stat">
-                    <span class="k-label">SILHOUETTE SCORE:</span>
+                    <span class="k-label">Silhouette</span>
                     <span class="k-val text-safe" id="val-silhouette">0.4176</span>
                   </div>
                   <div class="k-stat">
-                    <span class="k-label">90TH PCT THRESHOLD:</span>
+                    <span class="k-label">90th Pct Threshold</span>
                     <span class="k-val text-threat" id="val-threshold">6.2884</span>
                   </div>
                   <div class="k-stat">
-                    <span class="k-label">ANOMALY STRATEGY:</span>
-                    <span class="k-val">Centroid Distance Outliers</span>
+                    <span class="k-label">Strategy</span>
+                    <span class="k-val">Centroid Deviation</span>
                   </div>
                 </div>
               </div>
@@ -671,47 +462,36 @@
         </section>
 
         <!-- ============================================== -->
-        <!-- TAB 6: SQL ANALYTICS SHELL                     -->
+        <!-- TAB 6: SQL SHELL                              -->
         <!-- ============================================== -->
         <section id="tab-queries" class="view-panel">
           <div class="widget-card">
             <div class="widget-head">
-              <div>
-                <h3 class="widget-title">Distributed Spark SQL Query Shell</h3>
-                <p class="widget-subtitle">Execute distributed in-memory analytical queries on the
-                  <code>network_traffic</code> view</p>
-              </div>
-              <span class="widget-tag">Interactive Shell</span>
+              <h3 class="widget-title">SQL Query Shell</h3>
             </div>
 
             <div class="query-control-panel">
-              <label for="query-select">SELECT QUERY TEMPLATE:</label>
-              <div class="query-select-row">
-                <select id="query-select" class="ops-select">
-                  <option value="q1">Query 1: Real-World Macro Attack Category Distribution</option>
-                  <option value="q2">Query 2: Top 10 Attack Signatures by Flow Frequency</option>
-                  <option value="q3">Query 3: Window Ranking - Top 3 Targeted Ports per Threat Category</option>
-                  <option value="q4">Query 4: TCP Control Flag Threat Telemetry</option>
-                  <option value="q5">Query 5: Flow Rate & Packet Size Telemetry</option>
-                </select>
-                <button class="btn-action btn-primary" id="btn-run-query">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="5 3 19 12 5 21 5 3" />
-                  </svg>
-                  Execute Query
-                </button>
-              </div>
+              <select id="query-select" class="ops-select">
+                <option value="q1">Attack Category Distribution</option>
+                <option value="q2">Top 10 Attack Signatures</option>
+                <option value="q3">Targeted Ports Ranking</option>
+                <option value="q4">TCP Control Flags</option>
+                <option value="q5">Flow Dimensions</option>
+              </select>
+              <button class="btn-action btn-primary" id="btn-run-query">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                Run
+              </button>
             </div>
 
             <div class="sql-terminal">
               <div class="terminal-bar">
-                <span class="t-dot red"></span>
-                <span class="t-dot yellow"></span>
-                <span class="t-dot green"></span>
-                <span class="t-title">Spark SQL In-Memory Query Engine</span>
-                <span class="t-time font-mono" id="query-exec-time">Execution Time: 42 ms</span>
+                <span>Query</span>
+                <span class="font-mono" id="query-exec-time">Execution Time: 42 ms</span>
               </div>
-              <pre><code id="sql-display">-- Spark SQL query will appear here</code></pre>
+              <pre><code id="sql-display">-- Spark SQL query</code></pre>
             </div>
 
             <div class="table-card mt-4">
@@ -726,26 +506,16 @@
         </section>
 
       </main>
-
-      <!-- App Status Footer -->
-      <footer class="workspace-footer">
-        <div class="footer-left">
-          <span>grIDSentry SOC Platform • Canadian Institute for Cybersecurity (CICIDS2017 Dataset)</span>
-        </div>
-        <div class="footer-right">
-          <span>Apache Spark 4.2.0 • Columnar Snappy Parquet • 3,119,345 Flows</span>
-        </div>
-      </footer>
     </div>
   </div>
 
-  <!-- Flow Detail Slide-over Inspector Drawer -->
+  <!-- Flow Inspector Drawer -->
   <div class="flow-inspector-overlay" id="flow-inspector">
     <div class="flow-inspector-card">
       <div class="inspector-header">
         <div>
-          <h4 class="inspector-title">DEEP PACKET FLOW INSPECTOR</h4>
-          <span class="inspector-subtitle" id="insp-flow-id">Session Details</span>
+          <h4 class="inspector-title">PACKET INSPECTOR</h4>
+          <span class="inspector-subtitle" id="insp-flow-id"></span>
         </div>
         <button class="btn-close" id="btn-close-inspector">&times;</button>
       </div>

@@ -2,112 +2,67 @@
   "attack_distribution": [
     {
       "attack_category": "Normal",
-      "count": 2273097,
-      "percentage": 72.87
+      "count": 12000,
+      "percentage": 45.83
     },
     {
       "attack_category": "DoS/DDoS",
-      "count": 380699,
-      "percentage": 12.2
-    },
-    {
-      "attack_category": "Other Attack",
-      "count": 288602,
-      "percentage": 9.25
-    },
-    {
-      "attack_category": "PortScan/Probe",
-      "count": 158930,
-      "percentage": 5.09
+      "count": 5000,
+      "percentage": 19.1
     },
     {
       "attack_category": "Brute Force/Web",
-      "count": 16015,
-      "percentage": 0.51
+      "count": 4680,
+      "percentage": 17.87
+    },
+    {
+      "attack_category": "PortScan/Probe",
+      "count": 2500,
+      "percentage": 9.55
     },
     {
       "attack_category": "Botnet",
       "count": 1966,
-      "percentage": 0.06
+      "percentage": 7.51
     },
     {
       "attack_category": "Infiltration",
       "count": 36,
-      "percentage": 0.0
+      "percentage": 0.14
     }
   ],
   "top_attacks": [
     {
-      "attack_type": null,
-      "attack_category": "Other Attack",
-      "frequency": 288602,
-      "avg_duration_sec": 0.0,
-      "avg_fwd_bytes": 0.0,
-      "avg_bwd_bytes": 0.0
-    },
-    {
-      "attack_type": "DoS Hulk",
-      "attack_category": "DoS/DDoS",
-      "frequency": 231073,
-      "avg_duration_sec": 57.08,
-      "avg_fwd_bytes": 281.3,
-      "avg_bwd_bytes": 7770.7
-    },
-    {
-      "attack_type": "PortScan",
-      "attack_category": "PortScan/Probe",
-      "frequency": 158930,
-      "avg_duration_sec": 0.08,
-      "avg_fwd_bytes": 1.1,
-      "avg_bwd_bytes": 12.2
-    },
-    {
-      "attack_type": "DDoS",
-      "attack_category": "DoS/DDoS",
-      "frequency": 128027,
-      "avg_duration_sec": 16.96,
-      "avg_fwd_bytes": 31.9,
-      "avg_bwd_bytes": 7373.6
-    },
-    {
-      "attack_type": "DoS GoldenEye",
-      "attack_category": "DoS/DDoS",
-      "frequency": 10293,
-      "avg_duration_sec": 23.13,
-      "avg_fwd_bytes": 418.4,
-      "avg_bwd_bytes": 6561.3
-    },
-    {
       "attack_type": "FTP-Patator",
       "attack_category": "Brute Force/Web",
-      "frequency": 7938,
-      "avg_duration_sec": 4.51,
-      "avg_fwd_bytes": 60.0,
-      "avg_bwd_bytes": 93.9
-    },
-    {
-      "attack_type": "SSH-Patator",
-      "attack_category": "Brute Force/Web",
-      "frequency": 5897,
-      "avg_duration_sec": 6.17,
-      "avg_fwd_bytes": 1008.6,
-      "avg_bwd_bytes": 1382.6
+      "frequency": 2500,
+      "avg_duration_sec": 4.48,
+      "avg_fwd_bytes": 59.9,
+      "avg_bwd_bytes": 93.7
     },
     {
       "attack_type": "DoS slowloris",
       "attack_category": "DoS/DDoS",
-      "frequency": 5796,
-      "avg_duration_sec": 56.55,
-      "avg_fwd_bytes": 810.7,
-      "avg_bwd_bytes": 20.6
+      "frequency": 2500,
+      "avg_duration_sec": 55.41,
+      "avg_fwd_bytes": 774.6,
+      "avg_bwd_bytes": 8.2
     },
     {
-      "attack_type": "DoS Slowhttptest",
+      "attack_type": "DDoS",
       "attack_category": "DoS/DDoS",
-      "frequency": 5499,
-      "avg_duration_sec": 57.72,
-      "avg_fwd_bytes": 496.6,
-      "avg_bwd_bytes": 118.4
+      "frequency": 2500,
+      "avg_duration_sec": 15.08,
+      "avg_fwd_bytes": 31.4,
+      "avg_bwd_bytes": 8313.8
+    },
+    {
+      "attack_type": "PortScan",
+      "attack_category": "PortScan/Probe",
+      "frequency": 2500,
+      "avg_duration_sec": 0.06,
+      "avg_fwd_bytes": 4.0,
+      "avg_bwd_bytes": 151.3
     },
     {
       "attack_type": "Bot",
@@ -116,6 +71,38 @@
       "avg_duration_sec": 0.35,
       "avg_fwd_bytes": 2645.4,
       "avg_bwd_bytes": 63.8
+    },
+    {
+      "attack_type": "Web Attack - Brute Force",
+      "attack_category": "Brute Force/Web",
+      "frequency": 1507,
+      "avg_duration_sec": 6.51,
+      "avg_fwd_bytes": 2111.5,
+      "avg_bwd_bytes": 3484.7
+    },
+    {
+      "attack_type": "Web Attack - XSS",
+      "attack_category": "Brute Force/Web",
+      "frequency": 652,
+      "avg_duration_sec": 6.72,
+      "avg_fwd_bytes": 1197.6,
+      "avg_bwd_bytes": 4519.0
+    },
+    {
+      "attack_type": "Infiltration",
+      "attack_category": "Infiltration",
+      "frequency": 36,
+      "avg_duration_sec": 78.41,
+      "avg_fwd_bytes": 376725.8,
+      "avg_bwd_bytes": 5013.7
+    },
+    {
+      "attack_type": "Web Attack - Sql Injection",
+      "attack_category": "Brute Force/Web",
+      "frequency": 21,
+      "avg_duration_sec": 2.87,
+      "avg_fwd_bytes": 316.0,
+      "avg_bwd_bytes": 1286.3
     }
   ],
   "ranked_services": [
@@ -140,38 +127,20 @@
     {
       "attack_category": "Brute Force/Web",
       "service": 21,
-      "service_traffic": 7937,
+      "service_traffic": 2499,
       "rank": 1
-    },
-    {
-      "attack_category": "Brute Force/Web",
-      "service": 22,
-      "service_traffic": 5897,
-      "rank": 2
     },
     {
       "attack_category": "Brute Force/Web",
       "service": 80,
       "service_traffic": 2181,
-      "rank": 3
-    },
-    {
-      "attack_category": "DoS/DDoS",
-      "service": 80,
-      "service_traffic": 380685,
-      "rank": 1
-    },
-    {
-      "attack_category": "DoS/DDoS",
-      "service": 444,
-      "service_traffic": 11,
       "rank": 2
     },
     {
       "attack_category": "DoS/DDoS",
-      "service": 64873,
-      "service_traffic": 1,
-      "rank": 3
+      "service": 80,
+      "service_traffic": 5000,
+      "rank": 1
     },
     {
       "attack_category": "Infiltration",
@@ -180,27 +149,21 @@
       "rank": 1
     },
     {
-      "attack_category": "Other Attack",
+      "attack_category": "PortScan/Probe",
       "service": 80,
-      "service_traffic": 288602,
+      "service_traffic": 121,
       "rank": 1
     },
     {
       "attack_category": "PortScan/Probe",
-      "service": 80,
-      "service_traffic": 373,
-      "rank": 1
-    },
-    {
-      "attack_category": "PortScan/Probe",
-      "service": 21,
-      "service_traffic": 244,
+      "service": 443,
+      "service_traffic": 83,
       "rank": 2
     },
     {
       "attack_category": "PortScan/Probe",
-      "service": 22,
-      "service_traffic": 243,
+      "service": 21,
+      "service_traffic": 66,
       "rank": 3
     }
   ],
@@ -215,19 +178,19 @@
     },
     {
       "attack_category": "Brute Force/Web",
-      "avg_syn_flags": 0.2473,
+      "avg_syn_flags": 0.2662,
       "avg_rst_flags": 0.0,
-      "avg_psh_flags": 0.5594,
-      "avg_ack_flags": 0.4406,
+      "avg_psh_flags": 0.6951,
+      "avg_ack_flags": 0.3049,
       "avg_fin_flags": 0.0
     },
     {
       "attack_category": "DoS/DDoS",
-      "avg_syn_flags": 0.0072,
+      "avg_syn_flags": 0.1148,
       "avg_rst_flags": 0.0,
-      "avg_psh_flags": 0.2318,
-      "avg_ack_flags": 0.6145,
-      "avg_fin_flags": 0.1549
+      "avg_psh_flags": 0.6536,
+      "avg_ack_flags": 0.3464,
+      "avg_fin_flags": 0.0
     },
     {
       "attack_category": "Infiltration",
@@ -239,26 +202,18 @@
     },
     {
       "attack_category": "Normal",
-      "avg_syn_flags": 0.0549,
+      "avg_syn_flags": 0.0477,
       "avg_rst_flags": 0.0003,
-      "avg_psh_flags": 0.258,
-      "avg_ack_flags": 0.2869,
-      "avg_fin_flags": 0.0181
-    },
-    {
-      "attack_category": "Other Attack",
-      "avg_syn_flags": 0.0,
-      "avg_rst_flags": 0.0,
-      "avg_psh_flags": 0.0,
-      "avg_ack_flags": 0.0,
-      "avg_fin_flags": 0.0
+      "avg_psh_flags": 0.3407,
+      "avg_ack_flags": 0.2398,
+      "avg_fin_flags": 0.0083
     },
     {
       "attack_category": "PortScan/Probe",
       "avg_syn_flags": 0.0,
       "avg_rst_flags": 0.0,
-      "avg_psh_flags": 0.9996,
-      "avg_ack_flags": 0.0004,
+      "avg_psh_flags": 0.99,
+      "avg_ack_flags": 0.0096,
       "avg_fin_flags": 0.0
     }
   ],
@@ -272,17 +227,17 @@
     },
     {
       "attack_category": "Brute Force/Web",
-      "avg_flow_bytes_sec": 396296.6,
-      "avg_flow_pkts_sec": 63530.6,
-      "avg_packet_size": 26.0,
-      "avg_fwd_pkts": 8.3
+      "avg_flow_bytes_sec": 322474.7,
+      "avg_flow_pkts_sec": 48364.0,
+      "avg_packet_size": 18.4,
+      "avg_fwd_pkts": 8.0
     },
     {
       "attack_category": "DoS/DDoS",
-      "avg_flow_bytes_sec": 351628.7,
-      "avg_flow_pkts_sec": 110768.3,
-      "avg_packet_size": 683.3,
-      "avg_fwd_pkts": 5.1
+      "avg_flow_bytes_sec": 45408.7,
+      "avg_flow_pkts_sec": 1617.3,
+      "avg_packet_size": 485.9,
+      "avg_fwd_pkts": 5.3
     },
     {
       "attack_category": "Infiltration",
@@ -293,24 +248,17 @@
     },
     {
       "attack_category": "Normal",
-      "avg_flow_bytes_sec": 1778450.2,
-      "avg_flow_pkts_sec": 64728.0,
-      "avg_packet_size": 124.1,
-      "avg_fwd_pkts": 10.7
-    },
-    {
-      "attack_category": "Other Attack",
-      "avg_flow_bytes_sec": 0.0,
-      "avg_flow_pkts_sec": 0.0,
-      "avg_packet_size": 0.0,
-      "avg_fwd_pkts": 0.0
+      "avg_flow_bytes_sec": 2146862.8,
+      "avg_flow_pkts_sec": 64723.0,
+      "avg_packet_size": 168.5,
+      "avg_fwd_pkts": 60.8
     },
     {
       "attack_category": "PortScan/Probe",
-      "avg_flow_bytes_sec": 220185.1,
-      "avg_flow_pkts_sec": 62640.9,
-      "avg_packet_size": 4.6,
-      "avg_fwd_pkts": 1.0
+      "avg_flow_bytes_sec": 246108.2,
+      "avg_flow_pkts_sec": 55281.0,
+      "avg_packet_size": 19.8,
+      "avg_fwd_pkts": 1.2
     }
   ]
 }
