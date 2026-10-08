@@ -83,7 +83,7 @@
     
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h1 class='nb-h1'>🛡️ grIDSentry: High-Throughput Distributed Network Threat &amp; Zero-Day Anomaly Detection System (NIDS)</h1>
+              <div class="nb-rendered-markdown"><h1 class='nb-h1'>🛡️ grIDSentry: Distributed Network Threat &amp; Zero-Day Anomaly Detection System (NIDS)</h1>
 <p class='nb-p'>**BE Computer Science - Big Data Analytics (BDA) Mini Project**</p>
 <p class='nb-p'>[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raulferns/grIDSentry/blob/v2.0/BDA_MiniProject.ipynb)</p>
 <p class='nb-p'>[![Apache Spark](https://img.shields.io/badge/Apache_Spark-4.2_|_PySpark-E25A1C?logo=apachespark&amp;logoColor=white)](https://spark.apache.org/)</p>
@@ -91,50 +91,14 @@
 <p class='nb-p'>[![Analytics](https://img.shields.io/badge/Engine-Spark_SQL_&amp;_MLlib-007ACC?logo=python&amp;logoColor=white)](https://spark.apache.org/mllib/)</p>
 <p class='nb-p'>[![Dataset](https://img.shields.io/badge/Dataset-CICIDS2017_Benchmark-FF6F00)](https://www.unb.ca/cic/datasets/ids-2017.html)</p>
 <hr class='nb-hr'/>
-<h3 class='nb-h3'>📌 Project Executive Summary</h3>
-<p class='nb-p'>Modern hyper-scale enterprise networks and cloud environments process millions of concurrent packets per second. Conventional intrusion detection architectures built on relational databases and single-node Python (Pandas/Scikit-Learn) suffer from critical memory constraints ($O(N)$ RAM exhaustion), CPU bottlenecks, and cannot execute iterative machine learning across multi-gigabyte traffic dumps.</p>
-<p class='nb-p'>**grIDSentry** is an end-to-end distributed Big Data pipeline engineered natively on **Apache Spark 4.2 / PySpark**, **Snappy-compressed Apache Parquet**, **Spark SQL**, **Spark MLlib**, and **Spark Structured Streaming**. It ingests the real-world Canadian Institute for Cybersecurity benchmark (**CICIDS2017**, 3.11M records, 88 network attributes), cleans and normalizes flow dimensions, benchmarks columnar lakehouse compression, executes threat intelligence queries via Spark SQL window functions, trains distributed supervised classifiers (Logistic Regression, Random Forest, Gradient-Boosted Trees), identifies novel zero-day attacks via unsupervised K-Means centroid deviation scoring, and simulates live micro-batch packet stream processing.</p>
-<p class='nb-p'>```</p>
-<p class='nb-p'>+----------------------------------------------------------------------------------------------------------------+</p>
-<p class='nb-p'>|                                    grIDSentry END-TO-END PIPELINE ARCHITECTURE                                 |</p>
-<p class='nb-p'>+----------------------------------------------------------------------------------------------------------------+</p>
-<p class='nb-p'>|                                                                                                                |</p>
-<p class='nb-p'>|  [ Multi-Gigabyte Raw PCAP Logs ]  (CICIDS2017 Benchmark: 3.11M Flows, 88 Attributes)                         |</p>
-<p class='nb-p'>|                 │                                                                                              |</p>
-<p class='nb-p'>|                 ▼                                                                                              |</p>
-<p class='nb-p'>|  [ Distributed PySpark Ingestion ] ──► [ Schema Sanitization &amp; Inf/NaN Scrubbing ]                             |</p>
-<p class='nb-p'>|                 │                                                                                              |</p>
-<p class='nb-p'>|                 ▼                                                                                              |</p>
-<p class='nb-p'>|  [ Snappy Parquet Lakehouse ] ─────► [ 85.8% Storage Footprint Reduction &amp; Column Pruning ]                   |</p>
-<p class='nb-p'>|                 │                                                                                              |</p>
-<p class='nb-p'>|        ┌────────┴────────────────────────┬────────────────────────────────────────┐                            |</p>
-<p class='nb-p'>|        ▼                                 ▼                                        ▼                            |</p>
-<p class='nb-p'>|  [ Spark SQL Threat Intel ]     [ MLlib Feature Engineering ]          [ Structured Streaming ]                |</p>
-<p class='nb-p'>|   • Attack Macro Distribution    • VectorAssembler (43 continuous dims) • Micro-batch JSON Ingestion           |</p>
-<p class='nb-p'>|   • Window-based Targeted Ports  • StandardScaler (variance scaling)    • Sliding Window Threat Aggregation    |</p>
-<p class='nb-p'>|   • TCP Flag Signature Analysis  • Train/Test Partitioning              • Live Intrusion Console Sink          |</p>
-<p class='nb-p'>|   • Volumetric Traffic Telemetry         │                                                                     |</p>
-<p class='nb-p'>|        │                        ┌────────┴────────────────────────┐                                            |</p>
-<p class='nb-p'>|        │                        ▼                                 ▼                                            |</p>
-<p class='nb-p'>|        │           [ Supervised MLlib Benchmark ]     [ Unsupervised Zero-Day Detection ]                      |</p>
-<p class='nb-p'>|        │            • Logistic Regression (Linear)     • K-Means Clustering (k=6)                              |</p>
-<p class='nb-p'>|        │            • Random Forest (35 Trees)         • Euclidean Centroid Distance Scoring                   |</p>
-<p class='nb-p'>|        │            • Gradient-Boosted Trees (GBT)     • 90th Percentile Outlier Threshold                     |</p>
-<p class='nb-p'>|        │                        │                                 │                                            |</p>
-<p class='nb-p'>|        └────────────────────────┼─────────────────────────────────┘                                            |</p>
-<p class='nb-p'>|                                 ▼                                                                              |</p>
-<p class='nb-p'>|              [ High-Performance Executive Evaluation &amp; SOC Visualizations ]                                    |</p>
-<p class='nb-p'>|               • Spark vs Single-Node Pandas Scalability Benchmark                                              |</p>
-<p class='nb-p'>|               • Confusion Matrix &amp; ROC Curves                                                                  |</p>
-<p class='nb-p'>|               • 16+ Publication-Grade Analytical Figures                                                        |</p>
-<p class='nb-p'>+----------------------------------------------------------------------------------------------------------------+</p>
-<p class='nb-p'>```</p></div>
+<h3 class='nb-h3'>Project Overview</h3>
+<p class='nb-p'>**grIDSentry** is an end-to-end distributed network intrusion and anomaly detection pipeline built with **Apache Spark**, **Spark SQL**, **Spark MLlib**, and **Spark Structured Streaming** on the **CICIDS2017** benchmark dataset.</p></div>
             </div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 1 - Environment Setup &amp; High-Performance Plot Styling</h2>
-<p class='nb-p'>To ensure cross-platform reproducibility (Google Colab, Local Workstations, and Clustered Environments), we configure required dependencies quietly and set up a unified, publication-grade dark cyber aesthetic for all visualizations.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 1 - Environment Setup &amp; Visual Styling</h2>
+<p class='nb-p'>Configure runtime dependencies and plotting styles for high-DPI figures.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -188,9 +152,8 @@ print(f&quot;[OK] Environment verified. Python: {sys.version.split()[0]} | Visua
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 2 - Distributed SparkSession Initialization &amp; Tuning</h2>
-<p class='nb-p'>Apache Spark utilizes a master-worker architecture with lazy Directed Acyclic Graph (DAG) evaluation. Unlike Pandas, which loads entire data structures into contiguous single-node RAM, Spark breaks datasets into Resilient Distributed Datasets (RDDs) and DataFrames partitioned across CPU cores or cluster nodes.</p>
-<p class='nb-p'>We configure the driver with **4 GB allocated heap**, **8 shuffle partitions** matching our local execution threads (`local[*]`), JVM reflection permissions for Java 17 compatibility, and **Apache Arrow** serialization for high-speed PySpark-to-Pandas interop.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 2 - Distributed SparkSession Initialization</h2>
+<p class='nb-p'>Initialize the PySpark session with memory tuning, Arrow acceleration, and Java 17 compatibility.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -269,12 +232,7 @@ print(f&quot;[SPARK ONLINE] Version: {spark.version} | Master: {spark.sparkConte
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
               <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 3 - Multi-Source Dataset Ingestion &amp; Schema Audit</h2>
-<p class='nb-p'>We implement a multi-tier fallback ingestion engine that automatically checks:</p>
-<div class='nb-num-item'><b>1. </b> Pre-built columnar **Snappy Parquet** Lakehouse (`data/parquet_cicids/`)</div>
-<div class='nb-num-item'><b>2. </b> Full 1.15 GB **CICIDS2017** Raw PCAP Flow CSV files (`data/raw_cicids/TrafficLabelling/`)</div>
-<div class='nb-num-item'><b>3. </b> Portable evaluation sample (`data/sample_cicids/cicids2017_sample.csv`)</div>
-<div class='nb-num-item'><b>4. </b> Direct GitHub raw fetch fallback</div>
-<p class='nb-p'>This ensures the notebook executes seamlessly whether on Google Colab or local developer workstations.</p></div>
+<p class='nb-p'>Ingest network flow data from the Parquet Lakehouse or fallback CSV datasets.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -326,15 +284,8 @@ print(f&quot;-&gt; Total Columns:   {total_columns}&quot;)</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 4 - Schema Normalization &amp; Attack Category Harmonization</h2>
-<p class='nb-p'>Network flow captures often introduce:</p>
-<ul class='nb-ul'>
-<li>Leading/trailing whitespace in column names (e.g. `&#x27; Destination Port&#x27;` or `&#x27; Fwd Packet Length Max&#x27;`)</li>
-<li>Non-standard numeric representations and special characters</li>
-<li>Infinite values ($+\infty, -\infty$) and division-by-zero artifacts (`flow_bytes_s` when `flow_duration == 0`)</li>
-<li>15 fine-grained attack types requiring consolidation into 6 canonical macro cyber threat families</li>
-</ul>
-<p class='nb-p'>We perform distributed schema cleaning and sanitize all continuous feature columns.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 4 - Schema Normalization &amp; Attack Category Mapping</h2>
+<p class='nb-p'>Clean column headers, sanitize infinite/NaN values, and map fine-grained signatures to canonical threat categories.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -430,14 +381,8 @@ only showing top 5 rows
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 5 - Parquet Columnar Lakehouse Conversion &amp; Storage Reduction Benchmark</h2>
-<p class='nb-p'>In large-scale production architectures, storing raw logs in uncompressed CSV text leads to catastrophic I/O bottlenecks. **Apache Parquet** provides a binary, columnar storage format featuring:</p>
-<ul class='nb-ul'>
-<li>**Snappy Compression**: High-throughput compression with low CPU overhead.</li>
-<li>**Dictionary &amp; Bit-Packing Encoding**: Compresses repetitive IP addresses and flag combinations.</li>
-<li>**Column Pruning &amp; Predicate Pushdown**: Spark queries scan only the requested columns and skip non-matching row groups using Parquet min/max statistics.</li>
-</ul>
-<p class='nb-p'>We benchmark the disk footprint and query scan latency between raw CSV text logs and our Parquet Lakehouse.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 5 - Parquet Storage &amp; Query Latency Benchmark</h2>
+<p class='nb-p'>Benchmark disk storage reduction and query scan latency between raw CSV logs and Snappy-compressed Parquet.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -487,10 +432,8 @@ print(f&quot;Snappy Columnar Parquet:      {parquet_mb:.2f} MB&quot;)
 print(f&quot;Storage Footprint Reduction:  {storage_reduction_pct:.2f}% Savings&quot;)
 print(f&quot;Parquet Query Scan Latency:   {parquet_latency:.3f} s (vs estimated {csv_latency_estimated:.3f} s for CSV)&quot;)
 
-# FIGURE 1: Storage Benchmark &amp; Scan Latency
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5))
 
-# Plot 1: Storage Footprint
 bars = ax1.bar([&quot;Raw CSV Logs&quot;, &quot;Snappy Parquet&quot;], [csv_mb, parquet_mb], color=[&quot;#EF4444&quot;, &quot;#10B981&quot;], width=0.55)
 ax1.set_title(&quot;Storage Footprint Comparison (MB)&quot;, fontsize=13, fontweight=&#x27;bold&#x27;, pad=12)
 ax1.set_ylabel(&quot;Disk Footprint (MB)&quot;)
@@ -502,7 +445,6 @@ ax1.annotate(f&quot;-{storage_reduction_pct:.1f}% Footprint Reduction&quot;, xy=
              ha=&#x27;center&#x27;, fontsize=11, fontweight=&#x27;bold&#x27;, color=&#x27;#10B981&#x27;,
              bbox=dict(boxstyle=&quot;round,pad=0.4&quot;, fc=&quot;#064e3b&quot;, ec=&quot;#10b981&quot;, lw=1.5))
 
-# Plot 2: Scan Latency
 bars2 = ax2.bar([&quot;Raw CSV Scan&quot;, &quot;Parquet Scan&quot;], [csv_latency_estimated, parquet_latency], color=[&quot;#F59E0B&quot;, &quot;#38BDF8&quot;], width=0.55)
 ax2.set_title(&quot;Query Scan Latency: Port 80 Filter (Seconds)&quot;, fontsize=13, fontweight=&#x27;bold&#x27;, pad=12)
 ax2.set_ylabel(&quot;Execution Time (Seconds)&quot;)
@@ -533,9 +475,8 @@ Parquet Query Scan Latency:   0.680 s (vs estimated 2.312 s for CSV)
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 6 - Spark DataFrame API Operations &amp; In-Memory Spark SQL View</h2>
-<p class='nb-p'>We register an in-memory Temporary View (`network_traffic`) in the Spark catalog. This allows high-speed distributed SQL execution powered by the **Catalyst Query Optimizer**, which performs predicate pushdown, projection pruning, and join reordering.</p>
-<p class='nb-p'>We run our first deep macro query: computing the exact flow count and percentage share of every threat family across the 3.11M record dataset using the SQL window function `SUM(COUNT(*)) OVER()`.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 6 - Spark SQL View &amp; Threat Distribution Queries</h2>
+<p class='nb-p'>Register the temporary SQL view and compute flow distribution across threat families.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -608,15 +549,14 @@ q2_pd = q2_df.toPandas()</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 7 - Threat Intelligence Visualizations: Macro Distribution &amp; Signatures</h2>
-<p class='nb-p'>We visualize the macro attack landscape across the enterprise network. This reveals severe class imbalance: legitimate traffic dominates the baseline, while DoS/DDoS and PortScan represent massive volumetric attack spikes.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 7 - Threat Intelligence Visualizations</h2>
+<p class='nb-p'>Visualize macro attack category distribution, top signatures, and benign-to-malicious flow ratios.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
               <div class="nb-input-area">
                 <div class="nb-prompt">In [7]:</div>
-                <div class="nb-code-box"><pre><code class="language-python"># FIGURE 2: Macro Attack Category Distribution
-plt.figure(figsize=(11, 5.5))
+                <div class="nb-code-box"><pre><code class="language-python">plt.figure(figsize=(11, 5.5))
 bars = plt.barh(q1_pd[&quot;attack_category&quot;], q1_pd[&quot;flow_count&quot;], color=CYBER_PALETTE[:len(q1_pd)])
 plt.title(&quot;CICIDS2017 Macro Cyber Threat Family Distribution&quot;, fontsize=14, fontweight=&#x27;bold&#x27;, pad=14)
 plt.xlabel(&quot;Total Network Flow Count&quot;, fontsize=11)
@@ -634,7 +574,6 @@ plt.tight_layout()
 plt.savefig(os.path.join(OUT_DIR, &quot;fig2_attack_distribution.png&quot;), dpi=120)
 plt.show()
 
-# FIGURE 3 &amp; 4: Top Attack Signatures and Benign vs Malicious Doughnut
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
 # Top Attack Signatures
@@ -681,14 +620,8 @@ plt.show()</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 8 - Network Service &amp; Port Targeting (Spark SQL Window Functions)</h2>
-<p class='nb-p'>Adversaries target distinct network ports depending on their objective:</p>
-<ul class='nb-ul'>
-<li>**Port 80 (HTTP) &amp; Port 443 (HTTPS)**: High-bandwidth DoS / DDoS floods designed to overwhelm web application servers.</li>
-<li>**Port 21 (FTP) &amp; Port 22 (SSH)**: Targeted by brute-force credential stuffing bots (e.g. `FTP-Patator`, `SSH-Patator`).</li>
-<li>**Dynamic Ephemeral Ports**: Target of reconnaissance probes and SYN scans (`PortScan`).</li>
-</ul>
-<p class='nb-p'>We deploy an advanced SQL window function using `ROW_NUMBER() OVER (PARTITION BY attack_category ORDER BY COUNT(*) DESC)` to rank the top 3 targeted services per threat family.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 8 - Port Targeting Analysis (Spark SQL Window Functions)</h2>
+<p class='nb-p'>Identify the top targeted destination ports across attack categories using SQL window functions.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -715,7 +648,6 @@ q3_df = spark.sql(&quot;&quot;&quot;
 q3_df.show(truncate=False)
 q3_pd = q3_df.toPandas()
 
-# FIGURE 5: Most Targeted Ports Grouped by Threat Family
 plt.figure(figsize=(11, 5.5))
 sns.barplot(data=q3_pd, x=&quot;attack_category&quot;, y=&quot;service_traffic&quot;, hue=&quot;service_port&quot;, palette=&quot;viridis&quot;)
 plt.title(&quot;Top Targeted Destination Ports per Cyber Threat Family (Window Rank &lt;= 3)&quot;, fontsize=13, fontweight=&#x27;bold&#x27;, pad=14)
@@ -758,12 +690,7 @@ plt.show()</code></pre></div>
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
               <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 9 - Volumetric Telemetry &amp; Flow Rate Dynamics</h2>
-<p class='nb-p'>Network attacks exhibit distinct physical telemetry characteristics:</p>
-<ul class='nb-ul'>
-<li>**Volumetric Floods (DDoS Hulk, GoldenEye)**: Exhibit massive packet rates (`flow_pkts_s`) and high byte volumes designed to saturate uplink capacity.</li>
-<li>**Stealth Scans (PortScan)**: Characterized by minimal payload bytes, near-zero flow duration, and rapid port enumeration.</li>
-</ul>
-<p class='nb-p'>We analyze these telemetry signatures using Spark SQL aggregations.</p></div>
+<p class='nb-p'>Analyze flow durations, packet volumes, and byte transfer rates across attack categories.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -785,7 +712,6 @@ q4_df = spark.sql(&quot;&quot;&quot;
 q4_df.show(truncate=False)
 q4_pd = q4_df.toPandas()
 
-# FIGURE 6: Log-Scale Flow Rate Comparison (Bytes/Sec vs Packets/Sec)
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
 # Byte Rate
@@ -828,15 +754,8 @@ plt.show()</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 10 - TCP Protocol Control Flag Diagnostics (`SYN`, `RST`, `PSH`, `ACK`, `FIN`)</h2>
-<p class='nb-p'>TCP control flags dictate connection state:</p>
-<ul class='nb-ul'>
-<li>`SYN`: Initiates connections. An abnormal ratio of `SYN` flags with low `ACK` confirms a classic **SYN Flood DoS attack**.</li>
-<li>`PSH`: Pushes buffered data directly to the application layer. Dominant in legitimate interactive web browsing (`Normal`).</li>
-<li>`RST`: Abruptly aborts connections, frequent in port scanning and teardrop attacks.</li>
-<li>`FIN`: Graceful teardown of connections.</li>
-</ul>
-<p class='nb-p'>We calculate the mean occurrence rate of each TCP flag across threat families.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 10 - TCP Control Flag Signatures</h2>
+<p class='nb-p'>Analyze TCP flag patterns (`SYN`, `PSH`, `RST`, `FIN`, `ACK`) across normal and malicious flows.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -859,7 +778,6 @@ q5_df = spark.sql(&quot;&quot;&quot;
 q5_df.show(truncate=False)
 q5_pd = q5_df.toPandas()
 
-# FIGURE 8: TCP Control Flag Signatures across Threat Families
 flags = [&quot;avg_syn_flags&quot;, &quot;avg_rst_flags&quot;, &quot;avg_psh_flags&quot;, &quot;avg_ack_flags&quot;, &quot;avg_fin_flags&quot;]
 flag_labels = [&quot;SYN (Init)&quot;, &quot;RST (Reset)&quot;, &quot;PSH (Push)&quot;, &quot;ACK (Acknowledge)&quot;, &quot;FIN (Finish)&quot;]
 
@@ -899,9 +817,8 @@ plt.show()</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 11 - Distributed Statistical Correlation Matrix (Spark MLlib)</h2>
-<p class='nb-p'>To understand collinearity and multi-dimensional interaction among network dimensions, we compute a distributed Pearson correlation matrix across continuous telemetry attributes using Spark MLlib&#x27;s native `Correlation.corr()` engine.</p>
-<p class='nb-p'>This matrix computation executes in parallel across the Spark worker partitions using the outer product of assembled feature vectors.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 11 - Distributed Correlation Matrix (Spark MLlib)</h2>
+<p class='nb-p'>Compute Pearson correlation matrix across continuous telemetry attributes using Spark MLlib.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -926,7 +843,6 @@ corr_matrix_row = Correlation.corr(corr_transformed, &quot;corr_features&quot;, 
 corr_array = corr_matrix_row[0].toArray()
 corr_df = pd.DataFrame(corr_array, index=valid_corr_cols, columns=valid_corr_cols)
 
-# FIGURE 9: Distributed Correlation Matrix Heatmap
 plt.figure(figsize=(10, 8))
 mask = np.triu(np.ones_like(corr_df, dtype=bool))
 sns.heatmap(corr_df, mask=mask, annot=True, fmt=&quot;.2f&quot;, cmap=&quot;vlag&quot;, vmin=-1, vmax=1,
@@ -948,11 +864,8 @@ plt.show()</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 12 - Spark Window Functions: Volumetric Burst &amp; Spike Anomaly Detection</h2>
-<p class='nb-p'>In enterprise network monitoring, volumetric DDoS attacks and brute force scripts create sudden bursts that deviate significantly from baseline traffic on that port.</p>
-<p class='nb-p'>We use **Spark Window Functions** (`Window.partitionBy().orderBy().rowsBetween()`) to compute a rolling z-score:</p>
-<p class='nb-p'>$$\mu_{\text{rolling}} = \frac{1}{W} \sum_{i=0}^{W-1} x_i, \quad \sigma_{\text{rolling}} = \sqrt{\frac{1}{W}\sum_{i=0}^{W-1} (x_i - \mu)^2}, \quad z_i = \frac{x_i - \mu}{\sigma + \epsilon}$$</p>
-<p class='nb-p'>Flows with dynamic $|z| &gt; 3.0$ are flagged as anomalous traffic bursts in real time.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 12 - Volumetric Burst &amp; Anomaly Detection (Window Functions)</h2>
+<p class='nb-p'>Detect burst anomalies in network traffic using rolling z-scores over port partitions.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -990,7 +903,6 @@ sample_burst_pd = windowed_df.filter(F.col(&quot;dst_port&quot;) == 80).limit(10
     &quot;flow_bytes_s&quot;, &quot;rolling_avg_bytes&quot;, &quot;z_score&quot;, &quot;is_burst_anomaly&quot;, &quot;attack_category&quot;
 ).toPandas()
 
-# FIGURE 10: Window-Based Volumetric Spike Anomaly Detection
 plt.figure(figsize=(13, 5))
 plt.plot(sample_burst_pd.index, sample_burst_pd[&quot;flow_bytes_s&quot;], label=&quot;Observed Byte Rate (Bytes/s)&quot;, color=&quot;#38BDF8&quot;, alpha=0.8, lw=1.5)
 plt.plot(sample_burst_pd.index, sample_burst_pd[&quot;rolling_avg_bytes&quot;], label=&quot;Rolling 5-Flow Window Mean&quot;, color=&quot;#A855F7&quot;, linestyle=&quot;--&quot;, lw=2)
@@ -1024,11 +936,8 @@ plt.show()</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 13 - Distributed Feature Engineering Pipeline (Spark ML)</h2>
-<p class='nb-p'>Machine learning on distributed clusters requires reproducible, non-leaking transformations. We build an automated **Spark ML Pipeline**:</p>
-<div class='nb-num-item'><b>1. </b> `VectorAssembler`: Dynamically validates and bundles 43 continuous network flow metrics into a dense/sparse vector.</div>
-<div class='nb-num-item'><b>2. </b> `StandardScaler`: Normalizes feature variances ($z = \frac{x}{\sigma}$) across distributed worker partitions without centering, preserving sparse matrix efficiency.</div>
-<div class='nb-num-item'><b>3. </b> **Stratified Split**: Partitioned into 75% Training and 25% Testing partitions.</div></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 13 - Distributed Feature Engineering Pipeline</h2>
+<p class='nb-p'>Assemble 43 continuous features and apply standard scaling with Spark ML pipelines.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -1081,12 +990,8 @@ only showing top 3 rows
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 14 - Supervised Machine Learning Benchmark (Spark MLlib)</h2>
-<p class='nb-p'>We train and benchmark three distributed classifiers:</p>
-<div class='nb-num-item'><b>1. </b> **Logistic Regression**: Regularized linear baseline with elastic net mixing ($L_1 + L_2$).</div>
-<div class='nb-num-item'><b>2. </b> **Random Forest Classifier**: Distributed ensemble bagging with 35 decision trees and max depth 10.</div>
-<div class='nb-num-item'><b>3. </b> **Gradient-Boosted Trees (GBT)**: Sequential gradient error minimization for high non-linear precision.</div>
-<p class='nb-p'>We evaluate models across **Accuracy**, **Weighted Precision**, **Weighted Recall**, **F1-Score**, **ROC-AUC**, and **Inference Throughput (flows/sec)**.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 14 - Supervised ML Benchmark (Spark MLlib)</h2>
+<p class='nb-p'>Train and evaluate Logistic Regression, Random Forest, and Gradient-Boosted Trees classifiers.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -1153,10 +1058,8 @@ bench_df = pd.DataFrame(benchmark_results)
 bench_df.to_csv(os.path.join(OUT_DIR, &quot;model_benchmark_comparison.csv&quot;), index=False)
 print(&quot;\n&quot; + bench_df.to_string(index=False))
 
-# FIGURE 11: Multi-Panel Model Benchmark Comparison
 fig, axes = plt.subplots(1, 3, figsize=(16, 5))
 
-# Plot 1: Accuracy &amp; F1
 x = np.arange(len(bench_df))
 width = 0.35
 axes[0].bar(x - width/2, bench_df[&quot;Accuracy (%)&quot;], width, label=&#x27;Accuracy (%)&#x27;, color=&#x27;#00F0FF&#x27;)
@@ -1167,7 +1070,6 @@ axes[0].set_xticklabels(bench_df[&quot;Model&quot;], rotation=15)
 axes[0].set_ylim(60, 105)
 axes[0].legend()
 
-# Plot 2: ROC-AUC
 axes[1].bar(bench_df[&quot;Model&quot;], bench_df[&quot;ROC-AUC&quot;], color=&#x27;#10B981&#x27;, width=0.5)
 axes[1].set_title(&quot;Area Under ROC Curve (ROC-AUC)&quot;, fontsize=12, fontweight=&#x27;bold&#x27;)
 axes[1].set_xticklabels(bench_df[&quot;Model&quot;], rotation=15)
@@ -1175,7 +1077,6 @@ axes[1].set_ylim(0.7, 1.02)
 for i, v in enumerate(bench_df[&quot;ROC-AUC&quot;]):
     axes[1].text(i, v + 0.01, f&quot;{v:.4f}&quot;, ha=&#x27;center&#x27;, fontweight=&#x27;bold&#x27;, color=&#x27;white&#x27;, fontsize=10)
 
-# Plot 3: Inference Throughput
 axes[2].bar(bench_df[&quot;Model&quot;], bench_df[&quot;Throughput (flows/s)&quot;], color=&#x27;#F59E0B&#x27;, width=0.5)
 axes[2].set_title(&quot;Inference Throughput (Flows/Sec)&quot;, fontsize=12, fontweight=&#x27;bold&#x27;)
 axes[2].set_xticklabels(bench_df[&quot;Model&quot;], rotation=15)
@@ -1207,8 +1108,8 @@ Gradient-Boosted Trees         99.18          99.18       99.18         99.18   
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 15 - Model Interpretability &amp; Feature Importances</h2>
-<p class='nb-p'>In cybersecurity operations, &quot;black box&quot; models are untrusted by security analysts. We extract the internal Gini-impurity-based feature importance weights from the trained Random Forest ensemble to explain *which specific telemetry dimensions* drive intrusion detection decisions.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 15 - Feature Importances &amp; Model Interpretability</h2>
+<p class='nb-p'>Extract and visualize Gini feature importances from the Random Forest model.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -1226,7 +1127,6 @@ feat_importance_df = pd.DataFrame({
 print(&quot;=== TOP 10 DISCRIMINATIVE INTRUSION TELEMETRY FEATURES ===&quot;)
 print(feat_importance_df.head(10).to_string(index=False))
 
-# FIGURE 12: Top 15 Feature Importances
 plt.figure(figsize=(11, 6))
 top_15 = feat_importance_df.head(15).iloc[::-1]
 plt.barh(top_15[&quot;Feature&quot;], top_15[&quot;Importance&quot;], color=&quot;#00F0FF&quot;)
@@ -1261,7 +1161,7 @@ total_len_fwd_pkts    0.043904
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
               <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 16 - Diagnostic Evaluation: Confusion Matrix &amp; ROC Curves</h2>
-<p class='nb-p'>We evaluate the optimal classifier on the unseen test partition. A high False Positive rate overwhelms SOC operators with alert fatigue, while a False Negative lets an attacker penetrate the perimeter. We plot the complete **Confusion Matrix** and **ROC Curve**.</p></div>
+<p class='nb-p'>Evaluate classification performance on the test set using confusion matrix heatmaps and ROC curves.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -1291,7 +1191,6 @@ true_labels = [row[&quot;label&quot;] for row in best_preds.select(&quot;label&q
 fpr, tpr, _ = roc_curve(true_labels, pred_probs)
 roc_auc_val = auc(fpr, tpr)
 
-# FIGURE 13 &amp; 14: Confusion Matrix and ROC Curve
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5.5))
 
 # Confusion Matrix Heatmap
@@ -1334,11 +1233,8 @@ plt.show()</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 17 - Unsupervised Zero-Day Anomaly Detection (Spark MLlib K-Means)</h2>
-<p class='nb-p'>Supervised classifiers fail when confronted with previously unseen, novel zero-day exploits because no training labels exist.</p>
-<p class='nb-p'>To address zero-day threats, we deploy unsupervised **K-Means Clustering** ($k=6$). Each network flow is mapped into high-dimensional space and assigned to the nearest cluster centroid:</p>
-<p class='nb-p'>$$d(\mathbf{x}, \mathbf{c}_k) = \|\mathbf{x} - \mathbf{c}_k\|_2 = \sqrt{\sum_{j=1}^{D} (x_j - c_{k,j})^2}$$</p>
-<p class='nb-p'>Flows exhibiting distance scores in the top 90th percentile threshold ($d &gt; \tau_{90}$) are automatically flagged as **Zero-Day Intrusions**.</p></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 17 - Unsupervised Zero-Day Anomaly Detection (K-Means)</h2>
+<p class='nb-p'>Detect novel zero-day attacks using unsupervised K-Means clustering and centroid distance thresholding.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -1392,7 +1288,6 @@ scored_test.groupBy(&quot;attack_category&quot;, &quot;is_zero_day_anomaly&quot;
 # Sample for anomaly distribution plot
 anomaly_plot_pd = scored_test.select(&quot;anomaly_score&quot;, &quot;is_attack&quot;, &quot;attack_category&quot;).limit(500).toPandas()
 
-# FIGURE 15: Zero-Day Anomaly Distance Score Distribution
 plt.figure(figsize=(11, 5))
 sns.kdeplot(data=anomaly_plot_pd, x=&quot;anomaly_score&quot;, hue=&quot;is_attack&quot;, common_norm=False, fill=True, palette=[&quot;#10B981&quot;, &quot;#EF4444&quot;])
 plt.axvline(threshold, color=&quot;#F59E0B&quot;, linestyle=&quot;--&quot;, lw=2, label=f&quot;90th Percentile Cutoff ({threshold:.2f})&quot;)
@@ -1433,14 +1328,8 @@ plt.show()</code></pre></div>
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 18 - Real-Time Intrusion Detection via Spark Structured Streaming</h2>
-<p class='nb-p'>Enterprise Security Operations Centers (SOCs) require continuous packet evaluation. We deploy **Spark Structured Streaming** to monitor incoming micro-batches:</p>
-<ul class='nb-ul'>
-<li>Micro-batch JSON flow records staged into continuous input directories.</li>
-<li>Ingestion schema validation with `StructType`.</li>
-<li>Continuous stateful aggregations tracking threat counts per port and service.</li>
-<li>Micro-batch output console sink execution with checkpoint recovery.</li>
-</ul></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 18 - Real-Time Intrusion Detection (Structured Streaming)</h2>
+<p class='nb-p'>Simulate continuous micro-batch flow processing and real-time threat aggregation using Spark Structured Streaming.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -1527,16 +1416,8 @@ print(&quot;[STREAM COMPLETE] Micro-batch streaming pipeline executed successful
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 19 - Big Data Scalability Benchmark: PySpark vs Single-Node Pandas</h2>
-<p class='nb-p'>Why not just use Pandas?</p>
-<p class='nb-p'>To provide concrete academic proof of Big Data efficiency, we execute a side-by-side benchmark comparing **PySpark** against **Pandas** on identical operations:</p>
-<div class='nb-num-item'><b>1. </b> Multi-key group-by aggregation across threat categories and ports.</div>
-<div class='nb-num-item'><b>2. </b> Complex multi-condition filtering on high-volume network flows.</div>
-<h3 class='nb-h3'>Theoretical Foundations:</h3>
-<ul class='nb-ul'>
-<li>**Pandas**: Bound to a single CPU core, single-threaded execution, and limited to physical RAM. Operations cause immediate $O(N)$ memory duplication.</li>
-<li>**Apache Spark**: Distributed execution, **Catalyst Optimizer** query plan optimization, **Tungsten** off-heap binary memory management, and lazy DAG pipelining that scales horizontally to terabytes.</li>
-</ul></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 19 - Scalability Benchmark: PySpark vs Pandas</h2>
+<p class='nb-p'>Compare execution performance of distributed PySpark against single-node Pandas on aggregation and filtering tasks.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
@@ -1573,7 +1454,6 @@ print(f&quot;=== BIG DATA PERFORMANCE BENCHMARK ({bench_sample_count:,} Flows) =
 print(f&quot;GroupBy Aggregation -&gt; Spark: {spark_gb_time:.3f}s | Pandas: {pandas_gb_time:.3f}s&quot;)
 print(f&quot;Multi-Column Filter -&gt; Spark: {spark_filt_time:.3f}s | Pandas: {pandas_filt_time:.3f}s&quot;)
 
-# FIGURE 16: Spark vs Pandas Execution Time Comparison
 bench_data = pd.DataFrame({
     &quot;Operation&quot;: [&quot;GroupBy Aggregation&quot;, &quot;Multi-Column Filter&quot;],
     &quot;PySpark&quot;: [spark_gb_time, spark_filt_time],
@@ -1615,41 +1495,14 @@ Multi-Column Filter -&gt; Spark: 0.146s | Pandas: 0.003s
             
             <div class="nb-cell nb-markdown-cell">
               <div class="nb-prompt"></div>
-              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 20 - Enterprise Production SIEM/SOC Architecture &amp; Verification Checklist</h2>
-<h3 class='nb-h3'>🏗️ Enterprise Production Architecture</h3>
-<p class='nb-p'>In a Fortune 500 security operations center, grIDSentry integrates into a streaming cyber lakehouse:</p>
-<p class='nb-p'>```</p>
-<p class='nb-p'>[ Network TAP / SPAN Port ] (100 Gbps PCAP Packet Mirrors)</p>
-<p class='nb-p'>│</p>
-<p class='nb-p'>▼</p>
-<p class='nb-p'>[ Apache Kafka Cluster ] (Partitioned Ingestion Bus: `network-telemetry-raw`)</p>
-<p class='nb-p'>│</p>
-<p class='nb-p'>▼</p>
-<p class='nb-p'>[ Spark Structured Streaming ] (Continuous Feature Extraction &amp; Windowing)</p>
-<p class='nb-p'>│</p>
-<p class='nb-p'>┌───────┴───────────────────────────────┐</p>
-<p class='nb-p'>▼                                       ▼</p>
-<p class='nb-p'>[ Parquet / Delta Lake ]            [ Spark MLlib Real-Time Scoring ]</p>
-<p class='nb-p'>• Snappy-compressed Gold tables     • GBT Classification (Supervised)</p>
-<p class='nb-p'>• 85%+ storage footprint savings    • K-Means Centroid Deviation (Zero-Day)</p>
-<p class='nb-p'>• Long-term compliance retention            │</p>
-<p class='nb-p'>▼</p>
-<p class='nb-p'>[ ElasticSearch / SIEM / SOC HUD ]</p>
-<p class='nb-p'>• Real-Time Threat Alerts</p>
-<p class='nb-p'>• Dynamic Web Dashboard</p>
-<p class='nb-p'>```</p>
-<h3 class='nb-h3'>⚠️ Honest Technical Limitations &amp; Future Scope</h3>
-<div class='nb-num-item'><b>1. </b> **Encrypted Payload Inspection**: Modern TLS 1.3 encrypts application payloads; grIDSentry operates strictly on packet header metadata, flow inter-arrival times, and directional lengths without decrypting confidential content.</div>
-<div class='nb-num-item'><b>2. </b> **Adversarial Perturbation**: Sophisticated threat actors may inject artificial delay packets to evade timing-based features. Future scope includes adversarial GAN training.</div>
-<div class='nb-num-item'><b>3. </b> **Concept Drift**: Network baselines evolve over time (e.g. software updates). Production deployments require automated pipeline retraining triggered by drift detectors.</div>
-<div class='nb-num-item'><b>4. </b> **Cluster Scalability**: Benchmarked in local standalone mode (`local[*]`). Future enhancements include multi-node deployment on AWS EMR or Databricks with Kubernetes auto-scaling.</div></div>
+              <div class="nb-rendered-markdown"><h2 class='nb-h2'>Step 20 - Pipeline Verification &amp; Output Summary</h2>
+<p class='nb-p'>Verify all analytical figures, saved models, and benchmark metrics generated by the pipeline.</p></div>
             </div>
             
             <div class="nb-cell nb-code-cell">
               <div class="nb-input-area">
                 <div class="nb-prompt">In [20]:</div>
-                <div class="nb-code-box"><pre><code class="language-python"># STEP 20: Output Verification Checklist
-expected_artifacts = [
+                <div class="nb-code-box"><pre><code class="language-python">expected_artifacts = [
     &quot;fig1_storage_benchmark.png&quot;,
     &quot;fig2_attack_distribution.png&quot;,
     &quot;fig3_top_attacks_and_ratio.png&quot;,

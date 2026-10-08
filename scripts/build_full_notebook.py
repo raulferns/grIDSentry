@@ -21,9 +21,9 @@ def build_notebook():
     builder = NotebookBuilder()
 
     # ================================================================
-    # CELL 0: TITLE & ARCHITECTURAL OVERVIEW
+    # CELL 0: TITLE & OVERVIEW
     # ================================================================
-    builder.add_markdown("""# 🛡️ grIDSentry: High-Throughput Distributed Network Threat & Zero-Day Anomaly Detection System (NIDS)
+    builder.add_markdown("""# 🛡️ grIDSentry: Distributed Network Threat & Zero-Day Anomaly Detection System (NIDS)
 **BE Computer Science - Big Data Analytics (BDA) Mini Project**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raulferns/grIDSentry/blob/v2.0/BDA_MiniProject.ipynb)
@@ -34,53 +34,15 @@ def build_notebook():
 
 ---
 
-### 📌 Project Executive Summary
-Modern hyper-scale enterprise networks and cloud environments process millions of concurrent packets per second. Conventional intrusion detection architectures built on relational databases and single-node Python (Pandas/Scikit-Learn) suffer from critical memory constraints ($O(N)$ RAM exhaustion), CPU bottlenecks, and cannot execute iterative machine learning across multi-gigabyte traffic dumps.
-
-**grIDSentry** is an end-to-end distributed Big Data pipeline engineered natively on **Apache Spark 4.2 / PySpark**, **Snappy-compressed Apache Parquet**, **Spark SQL**, **Spark MLlib**, and **Spark Structured Streaming**. It ingests the real-world Canadian Institute for Cybersecurity benchmark (**CICIDS2017**, 3.11M records, 88 network attributes), cleans and normalizes flow dimensions, benchmarks columnar lakehouse compression, executes threat intelligence queries via Spark SQL window functions, trains distributed supervised classifiers (Logistic Regression, Random Forest, Gradient-Boosted Trees), identifies novel zero-day attacks via unsupervised K-Means centroid deviation scoring, and simulates live micro-batch packet stream processing.
-
-```
-+----------------------------------------------------------------------------------------------------------------+
-|                                    grIDSentry END-TO-END PIPELINE ARCHITECTURE                                 |
-+----------------------------------------------------------------------------------------------------------------+
-|                                                                                                                |
-|  [ Multi-Gigabyte Raw PCAP Logs ]  (CICIDS2017 Benchmark: 3.11M Flows, 88 Attributes)                         |
-|                 │                                                                                              |
-|                 ▼                                                                                              |
-|  [ Distributed PySpark Ingestion ] ──► [ Schema Sanitization & Inf/NaN Scrubbing ]                             |
-|                 │                                                                                              |
-|                 ▼                                                                                              |
-|  [ Snappy Parquet Lakehouse ] ─────► [ 85.8% Storage Footprint Reduction & Column Pruning ]                   |
-|                 │                                                                                              |
-|        ┌────────┴────────────────────────┬────────────────────────────────────────┐                            |
-|        ▼                                 ▼                                        ▼                            |
-|  [ Spark SQL Threat Intel ]     [ MLlib Feature Engineering ]          [ Structured Streaming ]                |
-|   • Attack Macro Distribution    • VectorAssembler (43 continuous dims) • Micro-batch JSON Ingestion           |
-|   • Window-based Targeted Ports  • StandardScaler (variance scaling)    • Sliding Window Threat Aggregation    |
-|   • TCP Flag Signature Analysis  • Train/Test Partitioning              • Live Intrusion Console Sink          |
-|   • Volumetric Traffic Telemetry         │                                                                     |
-|        │                        ┌────────┴────────────────────────┐                                            |
-|        │                        ▼                                 ▼                                            |
-|        │           [ Supervised MLlib Benchmark ]     [ Unsupervised Zero-Day Detection ]                      |
-|        │            • Logistic Regression (Linear)     • K-Means Clustering (k=6)                              |
-|        │            • Random Forest (35 Trees)         • Euclidean Centroid Distance Scoring                   |
-|        │            • Gradient-Boosted Trees (GBT)     • 90th Percentile Outlier Threshold                     |
-|        │                        │                                 │                                            |
-|        └────────────────────────┼─────────────────────────────────┘                                            |
-|                                 ▼                                                                              |
-|              [ High-Performance Executive Evaluation & SOC Visualizations ]                                    |
-|               • Spark vs Single-Node Pandas Scalability Benchmark                                              |
-|               • Confusion Matrix & ROC Curves                                                                  |
-|               • 16+ Publication-Grade Analytical Figures                                                        |
-+----------------------------------------------------------------------------------------------------------------+
-```
+### Project Overview
+**grIDSentry** is an end-to-end distributed network intrusion and anomaly detection pipeline built with **Apache Spark**, **Spark SQL**, **Spark MLlib**, and **Spark Structured Streaming** on the **CICIDS2017** benchmark dataset.
 """)
 
     # ================================================================
     # STEP 1: ENVIRONMENT SETUP & STYLING
     # ================================================================
-    builder.add_markdown("""## Step 1 - Environment Setup & High-Performance Plot Styling
-To ensure cross-platform reproducibility (Google Colab, Local Workstations, and Clustered Environments), we configure required dependencies quietly and set up a unified, publication-grade dark cyber aesthetic for all visualizations.
+    builder.add_markdown("""## Step 1 - Environment Setup & Visual Styling
+Configure runtime dependencies and plotting styles for high-DPI figures.
 """)
 
     builder.add_and_execute_code("""import os
@@ -1168,15 +1130,8 @@ print("[STREAM COMPLETE] Micro-batch streaming pipeline executed successfully.")
     # ================================================================
     # STEP 19: SPARK VS PANDAS BENCHMARK
     # ================================================================
-    builder.add_markdown("""## Step 19 - Big Data Scalability Benchmark: PySpark vs Single-Node Pandas
-Why not just use Pandas?
-To provide concrete academic proof of Big Data efficiency, we execute a side-by-side benchmark comparing **PySpark** against **Pandas** on identical operations:
-1. Multi-key group-by aggregation across threat categories and ports.
-2. Complex multi-condition filtering on high-volume network flows.
-
-### Theoretical Foundations:
-- **Pandas**: Bound to a single CPU core, single-threaded execution, and limited to physical RAM. Operations cause immediate $O(N)$ memory duplication.
-- **Apache Spark**: Distributed execution, **Catalyst Optimizer** query plan optimization, **Tungsten** off-heap binary memory management, and lazy DAG pipelining that scales horizontally to terabytes.
+    builder.add_markdown("""## Step 19 - Scalability Benchmark: PySpark vs Pandas
+Compare execution performance of distributed PySpark against single-node Pandas on aggregation and filtering tasks.
 """)
 
     builder.add_and_execute_code("""# Benchmark on identical sample
@@ -1241,38 +1196,10 @@ plt.show()
 """)
 
     # ================================================================
-    # STEP 20: ARCHITECTURE, LIMITATIONS & VERIFICATION
+    # STEP 20: PIPELINE VERIFICATION
     # ================================================================
-    builder.add_markdown("""## Step 20 - Enterprise Production SIEM/SOC Architecture & Verification Checklist
-
-### 🏗️ Enterprise Production Architecture
-In a Fortune 500 security operations center, grIDSentry integrates into a streaming cyber lakehouse:
-```
-  [ Network TAP / SPAN Port ] (100 Gbps PCAP Packet Mirrors)
-               │
-               ▼
-  [ Apache Kafka Cluster ] (Partitioned Ingestion Bus: `network-telemetry-raw`)
-               │
-               ▼
-  [ Spark Structured Streaming ] (Continuous Feature Extraction & Windowing)
-               │
-       ┌───────┴───────────────────────────────┐
-       ▼                                       ▼
-  [ Parquet / Delta Lake ]            [ Spark MLlib Real-Time Scoring ]
-   • Snappy-compressed Gold tables     • GBT Classification (Supervised)
-   • 85%+ storage footprint savings    • K-Means Centroid Deviation (Zero-Day)
-   • Long-term compliance retention            │
-                                               ▼
-                              [ ElasticSearch / SIEM / SOC HUD ]
-                               • Real-Time Threat Alerts
-                               • Dynamic Web Dashboard
-```
-
-### ⚠️ Honest Technical Limitations & Future Scope
-1. **Encrypted Payload Inspection**: Modern TLS 1.3 encrypts application payloads; grIDSentry operates strictly on packet header metadata, flow inter-arrival times, and directional lengths without decrypting confidential content.
-2. **Adversarial Perturbation**: Sophisticated threat actors may inject artificial delay packets to evade timing-based features. Future scope includes adversarial GAN training.
-3. **Concept Drift**: Network baselines evolve over time (e.g. software updates). Production deployments require automated pipeline retraining triggered by drift detectors.
-4. **Cluster Scalability**: Benchmarked in local standalone mode (`local[*]`). Future enhancements include multi-node deployment on AWS EMR or Databricks with Kubernetes auto-scaling.
+    builder.add_markdown("""## Step 20 - Pipeline Verification & Output Summary
+Verify all analytical figures, saved models, and benchmark metrics generated by the pipeline.
 """)
 
     builder.add_and_execute_code("""# STEP 20: Output Verification Checklist
